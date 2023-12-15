@@ -226,11 +226,11 @@ const Article = () => {
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${"https://aiproff.ai/dist/assets/applied-ai-654b1bfba8edd-2267b6d9.png"})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src={"https://aiproff.ai/dist/assets/applied-ai-654b1bfba8edd-2267b6d9.png"}
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -421,7 +421,7 @@ const Article = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image2} alt="graph-economic-impact" />
+                    <img src={"https://aiproff.ai/dist/assets/graph-1-53fa269d.png"} alt="graph-economic-impact" />
                     <p className="text-xs ">
                       AI holds a promising future for economies of G20
                       countries. Source: Accenture & Frontier Economics
@@ -491,7 +491,7 @@ const Article = () => {
                   </p>
                 </div>
                 <div>
-                  <img src={image3} alt="graph-economic-impact" />
+                  <img src={"https://aiproff.ai/dist/assets/pie1-8a100121.png"} alt="graph-economic-impact" />
                   <p className="text-xs ">
                     AI holds a promising future for economies of G20 countries.
                     Source: Accenture & Frontier Economics
@@ -538,7 +538,7 @@ const Article = () => {
                   </p>
                 </div>
                 <div>
-                  <img src={image4} alt="" />
+                  <img src={"https://aiproff.ai/dist/assets/diag1-0d507b3f.png"} alt="" />
                   <p className="text-xs ">
                     AI would be a catalyst for the development in
                     Self-Autonomous Vehicles. Source:{' '}
@@ -611,7 +611,7 @@ const Article = () => {
                   </p>
                 </div>
                 <div>
-                  <img src={image6}></img>
+                  <img src={"https://aiproff.ai/dist/assets/diag3-67890ddd.png"}></img>
                 </div>
                 <div>
                   <h1 className="text-4xl font-bold ">
@@ -671,7 +671,7 @@ const Article = () => {
                   </h1>
                 </div>
                 <div>
-                  <img src={image7} />
+                  <img src={"https://aiproff.ai/dist/assets/logo-e9bcf11e.png"} />
                 </div>
                 <div className="space-y-8">
                   <p>
@@ -929,7 +929,7 @@ const Article = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image1}
+              src={"https://aiproff.ai/dist/assets/img_1-95e9145b.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -951,7 +951,7 @@ const Article = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image2}
+              src={"https://aiproff.ai/dist/assets/nlp_bannerrr-af53a158.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -977,7 +977,7 @@ const Article = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image3}
+              src={"https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

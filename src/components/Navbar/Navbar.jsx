@@ -102,7 +102,7 @@ function Navbar() {
           </div>
           <div className="">
             <Link to="/" className="">
-              <img src="http://localhost:3000/dist/assets/logo-e9bcf11e.png" className="Logo " alt="Logo" />
+              <img src="https://aiproff.ai/dist/assets/logo-e9bcf11e.png" className="Logo " alt="Logo" />
             </Link>
           </div>
         </div>

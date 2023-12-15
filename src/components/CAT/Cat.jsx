@@ -25,7 +25,7 @@ const Cat = () => {
       <div className="mvpcontainer">
       <h1 className="head lg:text-5xl text-4xl font-bold">Corporate and Academic Training (CAT)</h1>
      <p>Welcome to AiProff.ai's Corporate and Academic Training Hub. We empower individuals and organisations with the knowledge and skills they need to excel in the world of Reliable and Robust AI.</p>
-     <img src="http://localhost:3000/dist/assets/CAT_img-fdc341d2.jpg" className='mvpimg' alt="this is img" />                                   
+     <img src="https://aiproff.ai/dist/assets/CAT_img-fdc341d2.jpg" className='mvpimg' alt="this is img" />                                   
      <p>In the modern competitive landscape of business that is empowered by AI, a workforce well-versed in AI/ML is a strategic asset. </p>
 
 <p>Our <b>Corporate Training</b> programs empower you and your team to make modern data-driven decisions, automate tasks, and drive innovation, using the power of Reliable and Robust AI. Our training can enhance your employees' skills, allowing you and your organisation to implement robust AI solutions. </p>

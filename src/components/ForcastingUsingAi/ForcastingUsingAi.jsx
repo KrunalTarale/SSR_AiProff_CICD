@@ -199,11 +199,11 @@ const ForcastingUsingAi = () => {
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${"https://aiproff.ai/dist/assets/forecasting-using-ai-654b1bf97eb0c-b456be5a.png"})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src={"https://aiproff.ai/dist/assets/forecasting-using-ai-654b1bf97eb0c-b456be5a.png"}
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -487,7 +487,7 @@ const ForcastingUsingAi = () => {
                 </div>
 
                 <div>
-                  <img src={image2} alt="graph-economic-impact" />
+                  <img src={"https://aiproff.ai/dist/assets/img2-15c9f2c4.jpg"} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
                     Interestingly, according to an article by{' '}
                     <a
@@ -574,7 +574,7 @@ const ForcastingUsingAi = () => {
                     which you saw in the previous section.{' '}
                   </p>
                   <div>
-                    <img src={image3} alt="this is img" />
+                    <img src={"https://aiproff.ai/dist/assets/img3-fa88eb88.jpg"} alt="this is img" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -689,7 +689,7 @@ const ForcastingUsingAi = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image7} alt="" />
+                    <img src={"https://aiproff.ai/dist/assets/logo-e9bcf11e.png"} alt="" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -940,7 +940,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image1}
+              src={"https://aiproff.ai/dist/assets/img_1-95e9145b.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -962,7 +962,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image2}
+              src={"https://aiproff.ai/dist/assets/nlp_bannerrr-af53a158.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -988,7 +988,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image3}
+              src={"https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

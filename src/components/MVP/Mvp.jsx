@@ -24,7 +24,7 @@ const Mvp = () => {
       <div className="mvpcontainer">
       <h1 className="head lg:text-5xl text-4xl font-bold">MVP (Minimum Viable Product)</h1>
      <p>A minimum viable product (MVP) is the basic version of a product or service that has enough features and functionality to satisfy the basic needs of a customer/client. MVP is a great starting product, upon which future development and improvement could be undertaken after getting the suggestions and feedback of early adopters and users of the product. An MVP is not a final or complete product, but rather a ‘prototype’ that encompasses the major features that can be tested and validated in the market.</p>
-     <img src="http://localhost:3000/assets/mvp-851d63c7.jpg" className='mvpimg' alt="this is img" />                                   
+     <img src="https://aiproff.ai/assets/mvp-851d63c7.jpg" className='mvpimg' alt="this is img" />                                   
      <p>For enterprises or any producer of a product or service, an MVP can help them reduce the risk of wasting time, money and resources on their products and services.</p>
 
 <p>An MVP helps them learn and understand about their target market, user preferences, their pain points and their feedback. Hence, MVP ensures that the enterprises are not developing full-fledged products that nobody wants or needs – thus saving time and resources. This allows enterprises to iterate and improve their product based on the market and return on investment, rather than assumptions or guesses.</p>

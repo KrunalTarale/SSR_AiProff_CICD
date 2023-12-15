@@ -25,7 +25,7 @@ const Blog = () => {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
         'The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, ',
-      imageUrl:"http://localhost:3000/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png",
+      imageUrl:"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png",
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
@@ -35,7 +35,7 @@ const Blog = () => {
       title: 'Introduction to Computer Vision: When Machines Start to See',
       subTitle:
         '"A computer deserves to be called intelligent if it could deceive a human into believing that it was human.”',
-      imageUrl:"http://localhost:3000/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png",
+      imageUrl:"https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png",
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
@@ -49,7 +49,7 @@ const Blog = () => {
       title: 'Applied AI: When AI solves real world problems ',
       subTitle:
         'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-      imageUrl: "http://localhost:3000/dist/assets/applied-ai-4-6538ad3e0b3a8-360becaa.png",
+      imageUrl: "https://aiproff.ai/dist/assets/applied-ai-4-6538ad3e0b3a8-360becaa.png",
       readTime: '3 min',
       date: 'Sept 23, 2023',
       publisher: 'AiProff',
@@ -59,7 +59,7 @@ const Blog = () => {
       title: 'Introduction: When AI starts to predict Future',
       subTitle:
         '"Forecasting is the art and science of predicting future events or outcomes based on past and present data.”',
-      imageUrl:"http://localhost:3000/dist/assets/forecasting-6538ad3fb2d70-de5b8000.png",
+      imageUrl:"https://aiproff.ai/dist/assets/forecasting-6538ad3fb2d70-de5b8000.png",
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
@@ -68,7 +68,7 @@ const Blog = () => {
     {
       title: 'Introduction: Reliable and Robust AI',
       subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
-      imageUrl:"http://localhost:3000/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png",
+      imageUrl:"https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png",
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',

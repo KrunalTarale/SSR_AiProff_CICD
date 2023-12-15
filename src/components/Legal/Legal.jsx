@@ -33,7 +33,7 @@ const Legal = () => {
             the section 10 of this Legal Terms page.
           </p>
           <div className="flex items-center justify-center">
-            <img src="http://localhost:3000/dist/assets/logo-e9bcf11e.png" className="max-h-[25rem]" />
+            <img src="https://aiproff.ai/dist/assets/logo-e9bcf11e.png" className="max-h-[25rem]" />
           </div>
           <h1 className="lg:text-4xl text-3xl font-bold">
             1. Ownership and Copyright

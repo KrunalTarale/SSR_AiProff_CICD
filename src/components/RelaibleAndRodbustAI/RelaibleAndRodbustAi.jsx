@@ -198,11 +198,11 @@ const RealaibleAndRodbustAi = () => {
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${"https://aiproff.ai/dist/assets/reliable-and-robust-ai-654b1bf75ef8b-f4d8398a.png"})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src={"https://aiproff.ai/dist/assets/reliable-and-robust-ai-654b1bf75ef8b-f4d8398a.png"}
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -509,7 +509,7 @@ const RealaibleAndRodbustAi = () => {
                       Solutions and Procedures for Reliable and Robust AI
                     </h1>
                   </div>
-                  <img src={image2} alt="graph-economic-impact" />
+                  <img src={"https://aiproff.ai/dist/assets/img_2-846a6d97.jpg"} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
                     We addressed the common challenges while developing an AI
                     model in the previous section. We also went through how a
@@ -569,7 +569,7 @@ const RealaibleAndRodbustAi = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image7} alt="" />
+                    <img src={"https://aiproff.ai/dist/assets/logo-e9bcf11e.png"} alt="" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -866,7 +866,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image1}
+              src={"https://aiproff.ai/dist/assets/ForecastingusingAI-fb943613.jpg"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -887,7 +887,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image2}
+              src={"https://aiproff.ai/dist/assets/nlp_bannerrr-af53a158.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -913,7 +913,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image3}
+              src={"https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

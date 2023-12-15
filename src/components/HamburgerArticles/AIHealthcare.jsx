@@ -11,7 +11,7 @@ function AIHealthcare() {
       <div className="min-w-full flex flex-col article">
         <div
           className="flex w-full xl:h-[35rem] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${"http://localhost:3000/dist/assets/Appliedaihealth-91cc579b.jpg"})` }}
+          style={{ backgroundImage: `url(${"https://aiproff.ai/dist/assets/Appliedaihealth-91cc579b.jpg"})` }}
         >
           <div className="max-3xl max-w-5xl common_padding">
             <h1 className="text-white xl:text-6xl lg:text-5xl md:text-4xl text-3xl leading-normal md:leading-normal lg:leading-normal font-semibold xl:leading-normal ">
