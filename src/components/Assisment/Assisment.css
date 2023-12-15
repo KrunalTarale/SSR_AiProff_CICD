@@ -86,5 +86,5 @@
 }
 
 .card_img{
-  background-image: url("/src/components/assets/trailer1.webp");
+  background-image: url("http://localhost:3000/dist/assets/trailer1-36338ef2.jpeg");
 }

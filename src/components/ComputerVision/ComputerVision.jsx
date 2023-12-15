@@ -200,11 +200,11 @@ const ComputerVision = () => {
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${"http://localhost:3000/dist/assets/cv-654b1bf98f9e1-a0cfa84e.png"})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src={"http://localhost:3000/dist/assets/cv-654b1bf98f9e1-a0cfa84e.png"}
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -443,7 +443,7 @@ const ComputerVision = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image2} alt="" />
+                    <img src={"http://localhost:3000/dist/assets/img2-5285d8ef.jpg"} alt="" />
                   </div>
                   <p>
                     The earliest applications of computer vision were mostly
@@ -496,7 +496,7 @@ const ComputerVision = () => {
 
                 <div>
                   <div></div>
-                  <img src={image3} alt="graph-economic-impact" />
+                  <img src={"http://localhost:3000/dist/assets/img3-2911734a.jpg"} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
                     The process of Computer Vision involves acquiring and
                     processing data from visual media (images and videos ) and
@@ -577,7 +577,7 @@ const ComputerVision = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image4} alt="" />
+                    <img src={"http://localhost:3000/dist/assets/img4-1cf61005.jpg"} alt="" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -703,7 +703,7 @@ const ComputerVision = () => {
 
                 <div className="space-y-8">
                   <div>
-                    <img src={image7} alt="" />
+                    <img src={"http://localhost:3000/dist/assets/logo-e9bcf11e.png"} alt="" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -958,7 +958,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image1}
+              src={"http://localhost:3000/dist/assets/ForecastingusingAI-fb943613.jpg"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -979,7 +979,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image2}
+              src={"http://localhost:3000/dist/assets/Appliedai-f07b5908.jpg"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1000,7 +1000,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image3}
+              src={"http://localhost:3000/dist/assets/img_1-95e9145b.jpg"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

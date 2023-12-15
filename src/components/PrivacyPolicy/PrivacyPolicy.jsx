@@ -30,7 +30,7 @@ const About = () => {
           Effective Date: 1-Apr-2023
           </p>
           <div className="flex items-center justify-center">
-            <img src={image} className="max-h-[25rem]" />
+            <img src="http://localhost:3000/dist/assets/logo-e9bcf11e.png" className="max-h-[25rem]" />
           </div>
 
           <p>

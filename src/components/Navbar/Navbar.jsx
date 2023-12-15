@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/logo.png';
 import 'font-awesome/css/font-awesome.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
@@ -103,7 +102,7 @@ function Navbar() {
           </div>
           <div className="">
             <Link to="/" className="">
-              <img src={logo} className="Logo " alt="Logo" />
+              <img src="http://localhost:3000/dist/assets/logo-e9bcf11e.png" className="Logo " alt="Logo" />
             </Link>
           </div>
         </div>

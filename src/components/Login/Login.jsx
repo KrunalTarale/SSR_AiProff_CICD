@@ -93,7 +93,7 @@ const Login = () => {
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side desktop_view">
           <div>
             <div className="text-white font-bold text-4xl font-sans">
-            <img src={logo} className="login_Logo" alt="Logo" />
+            <img src="http://localhost:3000/dist/assets/logo_webp-f984a964.png" className="login_Logo" alt="Logo" />
             </div>
             
             <p className="text-white mt-1 text-center">

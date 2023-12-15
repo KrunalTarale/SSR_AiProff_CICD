@@ -205,11 +205,11 @@ const Nlp = () => {
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${"http://localhost:3000/dist/assets/nlp-654b1bf74208d-354830eb.png"})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src="http://localhost:3000/dist/assets/nlp-654b1bf74208d-354830eb.png"
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -437,7 +437,7 @@ const Nlp = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image2} alt="graph-economic-impact" />
+                    <img src="http://localhost:3000/dist/assets/nlp_img2-13e7c0f1.jpg" alt="graph-economic-impact" />
                     <p className="text-xs ">
                       The interest in AI and NLP are growing at an exponential
                       rate rate. Source:{' '}
@@ -545,7 +545,7 @@ const Nlp = () => {
                 </div>
 
                 <div>
-                  <img src={image3} alt="graph-economic-impact" />
+                  <img src="http://localhost:3000/dist/assets/nlp_img3-d0311039.jpg" alt="graph-economic-impact" />
                   {/* <p className="text-xs ">
                     AI holds a promising future for economies of G20 countries.
                     Source: Accenture & Frontier Economics
@@ -612,7 +612,7 @@ const Nlp = () => {
                     data to gain insights and value.
                   </p>
 
-                  <img src={image4} alt="" className="mb-5" />
+                  <img src="http://localhost:3000/dist/assets/nlp_img4-d191169b.jpg" alt="" className="mb-5" />
                   <p>
                     2020 NLP survey. Source:{' '}
                     <a
@@ -787,7 +787,7 @@ const Nlp = () => {
                     more unpredictable the deep learning architecture becomes.
                   </p>
                   <div>
-                    <img src={image5}></img>
+                    <img src="http://localhost:3000/dist/assets/nlp_img5-7da65d1d.jpg"></img>
                     <p className="text-xs ">
                       The Diversity in AI and NLP, and interest in this field
                       over the decade, has been growing. Source:{' '}
@@ -872,7 +872,7 @@ const Nlp = () => {
                   </h1>
                 </div> */}
                 <div>
-                  <img src={image7} />
+                  <img src="http://localhost:3000/dist/assets/logo-e9bcf11e.png" />
                 </div>
                 <div className="space-y-8">
                   <p>
@@ -1127,7 +1127,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image1}
+              src="http://localhost:3000/dist/assets/ForecastingusingAI-fb943613.jpg"
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1148,7 +1148,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image2}
+              src="http://localhost:3000/dist/assets/Appliedai-f07b5908.jpg"
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1169,7 +1169,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={card_image3}
+              src="http://localhost:3000/dist/assets/img1-6aa100c3.jpg"
               className="rounded-t card_img"
               alt="Quantum Article"
             />

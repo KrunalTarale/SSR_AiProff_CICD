@@ -16,7 +16,7 @@ const Trailer = () => {
       <div className="lg:flex trailer ">
         <div className="flex lg:w-1/2">
           <img
-            src={image1}
+            src="http://localhost:3000/dist/assets/trailer2-3780cf58.jpeg"
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />
@@ -105,7 +105,7 @@ const Trailer = () => {
       <div className="lg:flex flex-row-reverse trailer ">
         <div className="flex lg:w-1/2">
           <img
-            src={image2}
+            src="http://localhost:3000/dist/assets/trailer1-36338ef2.jpeg"
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />
@@ -200,7 +200,7 @@ const Trailer = () => {
       <div className="lg:flex trailer ">
         <div className="flex lg:w-1/2">
           <img
-            src={image1}
+            src="http://localhost:3000/dist/assets/trailer2-3780cf58.jpeg"
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />

@@ -5,55 +5,55 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 // import OurTeam from './Team.json';
-import image1 from '../assets/Team/Nitin_Saraswat.png';
-import image2 from '../assets/Team/Aditya_Anil.png';
-import image3 from '../assets/Team/Aditya_Raj.png';
-import image4 from '../assets/Team/Jayalakshmi_Rajesh.png';
-import image5 from '../assets/Team/Krunal_Tarale.png';
-import image6 from '../assets/Team/Vintha_Meghanath_Reddy.png';
-import image7 from '../assets/Team/Usman_Khatri.png';
+// import image1 from '/assets/Nitin_Saraswat-7700b9ed.png';
+// import image2 from '../assets/Team/Aditya_Anil.png';
+// import image3 from '../assets/Team/Aditya_Raj.png';
+// import image4 from '../assets/Team/Jayalakshmi_Rajesh.png';
+// import image5 from '../assets/Team/Krunal_Tarale.png';
+// import image6 from '../assets/Team/Vintha_Meghanath_Reddy.png';
+// import image7 from '../assets/Team/Usman_Khatri.png';
 
 const ourteam = [
   {
     name: "Nitin Saraswat",
     position: "Founder and Senior Machine Learning Engineer",
-    img: image1,
+    img: "http://localhost:3000/dist/assets/Nitin_Saraswat-7700b9ed.png",
     linkdin_url: "https://www.linkedin.com/in/nitinsaraswat/",
   },
   {
     name: "Aditya Anil",
     position: "Senior Technical Writer & Content Developer",
-    img: image2,
+    img: "http://localhost:3000/dist/assets/Aditya_Anil-ac443e33.png",
     linkdin_url: "https://www.linkedin.com/in/its-aditya-an1l/",
   },
   {
     name: "Aditya Raj",
     position: "Machine Learning Engineer",
-    img: image3,
+    img: "http://localhost:3000/dist/assets/Aditya_Raj-e5c24d97.png",
     linkdin_url: "https://www.linkedin.com/in/adityarajsingh142/",
   },
   {
     name: "Jayalakshmi Rajesh",
     position: "Graphics Designer & Content Developer",
-    img: image4,
+    img: "http://localhost:3000/dist/assets/Jayalakshmi_Rajesh-9e3bd286.png",
     linkdin_url: "https://www.linkedin.com/in/jayalakshmi-rajesh-74ba47243/",
   },
   {
     name: "Krunal Tarale",
     position: "Full Stack Web Developer",
-    img: image5,
+    img: "http://localhost:3000/dist/assets/Krunal_Tarale-bbc5618c.png",
     linkdin_url: "https://www.linkedin.com/in/krunal-tarale-40169923b/",
   },
   {
     name: "Vintha Meghanath Reddy",
     position: "Machine Learning Engineer",
-    img: image6,
+    img: "http://localhost:3000/dist/assets/Vintha_Meghanath_Reddy-92196b91.png",
     linkdin_url: "https://www.linkedin.com/in/meghanathreddyv/",
   },
   {
     name: "Usman Khatri",
     position: "Full Stack App Developer",
-    img: image7,
+    img: "http://localhost:3000/dist/assets/Usman_Khatri-e0461613.png",
     linkdin_url: "https://www.linkedin.com/in/usman-khatri-92aa94223/",
   },
 ];

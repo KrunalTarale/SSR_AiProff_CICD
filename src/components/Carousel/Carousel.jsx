@@ -8,14 +8,15 @@ import {
 
 import { Link } from 'react-router-dom'
 
-import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.png';
-import image2 from '../assets/Nlp_img/nlp-654b1bf74208d.png';
-import image3 from '../assets/ComputerVision/cv-654b1bf98f9e1.png';
-import image4 from '../assets/forcastingAi/forecasting-using-ai-654b1bf97eb0c.png';
-import image5 from '../assets/rodbust_ai/reliable-and-robust-ai-654b1bf75ef8b.png';
+// import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.png';
+// import image2 from '../assets/Nlp_img/nlp-654b1bf74208d.png';
+// import image3 from '../assets/ComputerVision/cv-654b1bf98f9e1.png';
+// import image4 from '../assets/forcastingAi/forecasting-using-ai-654b1bf97eb0c.png';
+// import image5 from '../assets/rodbust_ai/reliable-and-robust-ai-654b1bf75ef8b.png';
 
 const Carousel = () => {
-  const images = [image1, image2, image3, image4, image5];
+  const images = ["http://localhost:3000/dist/assets/applied-ai-654b1bfba8edd-2267b6d9.png", "http://localhost:3000/dist/assets/nlp-654b1bf74208d-354830eb.png","http://localhost:3000/dist/assets/cv-654b1bf98f9e1-a0cfa84e.png","http://localhost:3000/dist/assets/forecasting-using-ai-654b1bf97eb0c-b456be5a.png","http://localhost:3000/dist/assets/reliable-and-robust-ai-654b1bf75ef8b-f4d8398a.png"];
+  // const images = [image1, image2, image3, image4, image5];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

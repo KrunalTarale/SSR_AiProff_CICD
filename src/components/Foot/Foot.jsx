@@ -128,7 +128,7 @@ const Footer = () => {
                 target='blank'
               >
                 <img
-                  src={twitter}
+                  src="http://localhost:3000/dist/assets/x-twitter-d8f35a67.svg"
                   alt="Twitter Icon"
                   style={{ width: '24px', height: '24px' }}
                 />

@@ -31,7 +31,7 @@ const Poc = () => {
           A POC can help to reduce risks and costs for enterprises before they
           invest in a full-scale feature of a product.
         </p>
-        <img src={image1} className="mvpimg" alt="this is img" />
+        <img src="http://localhost:3000/dist/assets/poc-9640e5c8.jpg" className="mvpimg" alt="this is img" />
         <p>
           For enterprises with a product/service, a POC can help them validate
           their ideas to potential customers or partners.{' '}
