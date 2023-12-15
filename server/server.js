@@ -117,6 +117,6 @@ const serverRenderer = (req, res) => {
 app.use('/', serverRenderer);
 
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(1338, () => {
+  console.log('Server is running on port 1338');
 });
