@@ -5,13 +5,13 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 // import OurTeam from './Team.json';
-// import image1 from '/assets/Nitin_Saraswat-7700b9ed.png';
-// import image2 from '../assets/Team/Aditya_Anil.png';
-// import image3 from '../assets/Team/Aditya_Raj.png';
-// import image4 from '../assets/Team/Jayalakshmi_Rajesh.png';
-// import image5 from '../assets/Team/Krunal_Tarale.png';
-// import image6 from '../assets/Team/Vintha_Meghanath_Reddy.png';
-// import image7 from '../assets/Team/Usman_Khatri.png';
+// import image1 from '/assets/Team/Nitin_Saraswat.png';
+import image2 from '../assets/Team/Aditya_Anil.png';
+import image3 from '../assets/Team/Aditya_Raj.png';
+import image4 from '../assets/Team/Jayalakshmi_Rajesh.png';
+import image5 from '../assets/Team/Krunal_Tarale.png';
+import image6 from '../assets/Team/Vintha_Meghanath_Reddy.png';
+import image7 from '../assets/Team/Usman_Khatri.png';
 
 const ourteam = [
   {
