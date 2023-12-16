@@ -5,7 +5,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 // import OurTeam from './Team.json';
-// import image1 from '/assets/Team/Nitin_Saraswat.png';
+import image1 from '../assets/Team/Nitin_Saraswat.png';
 import image2 from '../assets/Team/Aditya_Anil.png';
 import image3 from '../assets/Team/Aditya_Raj.png';
 import image4 from '../assets/Team/Jayalakshmi_Rajesh.png';
