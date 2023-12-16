@@ -16,7 +16,7 @@ const Buy = () => {
           </Helmet>
       <Navbar />
 
-      <h1 className="text-4xl font-semibold text-center mt-10">Paid Services/Subscriptions will be available soon.</h1>
+      <h1 className="text-4xl font-semibold text-center mt-10">Paid Services/Subscriptions will be available soon</h1>
 
     </div>
   );
