@@ -28,7 +28,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-col justify-center 2xl:max-w-6xl xl:max-w-5xl lg:max-w-3xl md:max-w-2xl max-w-xl mx-auto space-y-12  p-8 my-20">
-        <h1 className="lg:text-5xl text-4xl font-bold">About us.</h1>
+        <h1 className="lg:text-5xl text-4xl font-bold">About us</h1>
         <div className="lg:text-xl text-lg">
           <p className="leading-loose text-md md:text-xl text-gray-700 mb-3">
             Welcome to AiProff.ai ! We specialize in Natural Language

@@ -5,21 +5,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Europe’s IT sector worried AI Act ‘misses mark on tech neutrality’',
-      url: 'https://thenextweb.com/news/europes-it-sector-worried-ai-act-tech-neutrality',
+        `ByteDance secretly using OpenAI’s tech to build a competitor, which is seen as a violation of OpenAI's terms of service`,
+      url: 'https://www.theverge.com/2023/12/15/24003151/bytedance-china-openai-microsoft-competitor-llm',
     },
     {
-      headline: 'Alibaba donates its quantum lab to a local university, shifts focus to AI in agriculture and healthcare.',
-      url: 'https://www.scmp.com/tech/big-tech/article/3242956/alibaba-donates-its-quantum-lab-local-university-shifts-focus-ai-agriculture-healthcare',
+      headline: 'Midjourney to launch a new platform for AI image generation',
+      url: 'https://venturebeat.com/ai/midjourney-alpha-is-here-with-ai-image-generations-on-the-web/',
     },
     {
-      headline: "The Pentagon's new initiative, Replicator, aims to deploy thousands of AI-enabled autonomous vehicles by 2026",
-      url: 'https://economictimes.indiatimes.com/tech/technology/pentagons-ai-initiatives-accelerate-hard-decisions-on-lethal-autonomous-weapons/articleshow/105507375.cms',
+      headline: "Intel unveils its new Core Ultra processors for enhancing AI power efficiency and performance capabilities.",
+      url: 'https://www.theverge.com/2023/12/14/23998215/intel-core-ultra-cpu-specs-availability',
     },
     {
       headline:
-        'Nvidia postpones the release of its China-compliant AI chip to next year amid U.S. export regulations',
-      url: 'https://www.reuters.com/technology/nvidia-delays-launch-new-china-focused-ai-chip-sources-2023-11-24/',
+        'ChatGPT’s New Rival: Google’s Gemini ',
+      url: 'https://www.kdnuggets.com/chatgpts-new-rival-googles-gemini',
     },
   ];
 
