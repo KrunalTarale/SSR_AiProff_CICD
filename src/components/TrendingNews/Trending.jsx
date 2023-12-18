@@ -5,20 +5,25 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        `ByteDance secretly using OpenAI’s tech to build a competitor, which is seen as a violation of OpenAI's terms of service`,
+        `ByteDance secretly using OpenAI’s tech to build a competitor`,
       url: 'https://www.theverge.com/2023/12/15/24003151/bytedance-china-openai-microsoft-competitor-llm',
     },
     {
-      headline: 'Midjourney to launch a new platform for AI image generation',
+      headline: `DeepMind's AI found a new approach to the long-standing "cap set puzzle," surpassing human-led solutions.`,
+      url: 'https://www.technologyreview.com/2023/12/14/1085318/google-deepmind-large-language-model-solve-unsolvable-math-problem-cap-set/',
+    },
+    {
+      headline: "Midjourney to launch a new platform for AI image generation",
       url: 'https://venturebeat.com/ai/midjourney-alpha-is-here-with-ai-image-generations-on-the-web/',
     },
     {
-      headline: "Intel unveils its new Core Ultra processors for enhancing AI power efficiency and performance capabilities.",
+      headline:
+        'Intel unveils its new Core Ultra processors for enhancing AI capabilities',
       url: 'https://www.theverge.com/2023/12/14/23998215/intel-core-ultra-cpu-specs-availability',
     },
     {
       headline:
-        'ChatGPT’s New Rival: Google’s Gemini ',
+        'ChatGPT’s New Rival: Google’s Gemini',
       url: 'https://www.kdnuggets.com/chatgpts-new-rival-googles-gemini',
     },
   ];
