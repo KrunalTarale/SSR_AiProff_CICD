@@ -3,10 +3,16 @@ import backgroundImage from '../assets/Banners/CV/cvinretail.jpg';
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
+import { Helmet } from 'react-helmet';
 
 function CVRetail() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/computer-vision-retail" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div

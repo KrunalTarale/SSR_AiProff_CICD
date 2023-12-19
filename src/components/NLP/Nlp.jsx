@@ -198,7 +198,7 @@ const Nlp = () => {
   return (
     <>
         <Helmet>
-            {/* <link href="https://www.aiproff.ai/introduction-to-nlp" rel="canonical" /> */}
+            <link href="https://www.aiproff.ai/introduction-to-nlp" rel="canonical" />
         </Helmet>
       <Navbar />
       <div className="article">
@@ -1127,7 +1127,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src="https://aiproff.ai/dist/assets/ForecastingusingAI-fb943613.jpg"
+              src="https://aiproff.ai/dist/assets/forecasting-6538ad3fb2d70-de5b8000.png"
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1148,7 +1148,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src="https://aiproff.ai/dist/assets/Appliedai-f07b5908.jpg"
+              src="https://aiproff.ai/dist/assets/applied-ai-4-6538ad3e0b3a8-360becaa.png"
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1169,7 +1169,7 @@ const Nlp = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src="https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"
+              src="https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png"
               className="rounded-t card_img"
               alt="Quantum Article"
             />

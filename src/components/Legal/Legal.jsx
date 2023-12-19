@@ -5,6 +5,7 @@ import image from '../assets/Article1/logo.png';
 import './Legal.css';
 import { useEffect } from 'react';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 const Legal = () => {
 
   useEffect(() => {
@@ -13,6 +14,11 @@ const Legal = () => {
 
   return (
     <div className="Legal">
+
+          <Helmet>
+                <link href="https://www.aiproff.ai/legal" rel="canonical" />
+          </Helmet>
+
       <div>
         <Navbar />
       </div>

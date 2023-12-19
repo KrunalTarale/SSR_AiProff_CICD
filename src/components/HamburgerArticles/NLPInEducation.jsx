@@ -3,10 +3,16 @@ import backgroundImage from '../assets/Banners/NLP/NLPINEDUCATION.jpg';
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
+import { Helmet } from 'react-helmet';
 
 function NLPInEducation() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/nlp-in-education" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div

@@ -2,11 +2,17 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
+import {Helmet} from 'react-helmet';
 import backgroundImage from '../assets/Banners/Appliedai/Appliedaihealth.jpg';
 
 function AIHealthcare() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/applied-ai-healthcare" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div

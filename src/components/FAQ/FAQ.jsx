@@ -36,7 +36,7 @@ const Faq = () => {
     <div className="flex flex-col ">
 
       <Helmet>
-          {/* <link href="https://www.aiproff.ai/faq" rel="canonical" /> */}
+          <link href="https://www.aiproff.ai/faq" rel="canonical" />
       </Helmet>
 
       <div>

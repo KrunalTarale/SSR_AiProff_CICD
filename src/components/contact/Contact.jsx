@@ -157,7 +157,7 @@ const Contact = () => {
     <>
 
               <Helmet>
-                {/* <link href="https://www.aiproff.ai/contact" rel="canonical" /> */}
+                <link href="https://www.aiproff.ai/contact" rel="canonical" />
               </Helmet>
 
       <Navbar />

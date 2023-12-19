@@ -3,10 +3,16 @@ import backgroundImage from '../assets/Banners/Appliedai/aiaero.jpg';
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
+import { Helmet } from 'react-helmet';
 
 function AppliedaiAerospace() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/applied-ai-aerospace" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div

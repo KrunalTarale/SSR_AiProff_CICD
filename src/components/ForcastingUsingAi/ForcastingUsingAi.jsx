@@ -190,8 +190,8 @@ const ForcastingUsingAi = () => {
   return (
     <>
 
-<Helmet>
-                {/* <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" /> */}
+              <Helmet>
+                <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" />
               </Helmet>
 
       <Navbar />
@@ -940,7 +940,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/img_1-95e9145b.jpg"}
+              src={"https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -962,7 +962,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/nlp_bannerrr-af53a158.png"}
+              src={"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -988,7 +988,7 @@ const ForcastingUsingAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"}
+              src={"https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

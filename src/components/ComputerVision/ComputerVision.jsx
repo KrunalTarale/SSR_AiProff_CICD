@@ -192,7 +192,7 @@ const ComputerVision = () => {
     <>
 
               <Helmet>
-                {/* <link href="https://www.aiproff.ai/computer-vision" rel="canonical" /> */}
+                <link href="https://www.aiproff.ai/computer-vision" rel="canonical" />
               </Helmet>
 
       <Navbar />
@@ -958,7 +958,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/ForecastingusingAI-fb943613.jpg"}
+              src={"https://aiproff.ai/dist/assets/forecasting-6538ad3fb2d70-de5b8000.png"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -979,7 +979,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/Appliedai-f07b5908.jpg"}
+              src={"https://aiproff.ai/dist/assets/applied-ai-4-6538ad3e0b3a8-360becaa.png"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -1000,7 +1000,7 @@ const ComputerVision = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/img_1-95e9145b.jpg"}
+              src={"https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

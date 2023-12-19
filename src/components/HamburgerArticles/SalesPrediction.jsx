@@ -3,10 +3,16 @@ import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
 import backgroundImage from '../assets/Banners/FORECASTING/SALESPREDICTION.jpg';
+import { Helmet } from 'react-helmet';
 
 function SalesPrediction() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/ai-sales-prediction" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div 

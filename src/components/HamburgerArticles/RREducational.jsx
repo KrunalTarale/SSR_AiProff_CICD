@@ -2,10 +2,16 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
+import { Helmet } from 'react-helmet';
 
 function RREducational() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/reliable-and-robust-ai-education" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div className="flex w-full xl:h-[35rem] bg-gradient-to-r from-blue-950 to-blue-500  ">

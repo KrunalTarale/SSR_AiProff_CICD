@@ -2,11 +2,17 @@ import React from 'react';
 import backgroundImage from '../assets/Banners/Appliedai/Appliedaieducation.jpg';
 import Navbar from '../Navbar/Navbar.jsx';
 import Footer from '../Foot/Foot.jsx';
+import { Helmet } from 'react-helmet';
 import './HamburgerArticle.css';
 
 function AppliedaiEducation() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/applied-ai-education" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div

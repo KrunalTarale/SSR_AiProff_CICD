@@ -190,7 +190,7 @@ const RealaibleAndRodbustAi = () => {
     <>
 
               <Helmet>
-                {/* <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" /> */}
+                <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" />
               </Helmet>
 
       <Navbar />
@@ -866,7 +866,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/ForecastingusingAI-fb943613.jpg"}
+              src={"https://aiproff.ai/dist/assets/forecasting-6538ad3fb2d70-de5b8000.png"}
               className="rounded-t"
               alt="Quantum Article"
             />
@@ -887,7 +887,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/nlp_bannerrr-af53a158.png"}
+              src={"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -913,7 +913,7 @@ const RealaibleAndRodbustAi = () => {
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/img1-6aa100c3.jpg"}
+              src={"https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />

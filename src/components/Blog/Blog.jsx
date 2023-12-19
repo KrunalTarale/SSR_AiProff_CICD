@@ -156,7 +156,7 @@ const Blog = () => {
     <div>
 
               <Helmet>
-                {/* <link href="https://www.aiproff.ai/blog" rel="canonical" /> */}
+                <link href="https://www.aiproff.ai/blog" rel="canonical" />
               </Helmet>
 
       <Navbar />

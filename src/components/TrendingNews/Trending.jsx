@@ -9,7 +9,7 @@ const Trending = () => {
       url: 'https://www.theverge.com/2023/12/15/24003151/bytedance-china-openai-microsoft-competitor-llm',
     },
     {
-      headline: `DeepMind's AI found a new approach to the long-standing "cap set puzzle," surpassing human-led solutions.`,
+      headline: `DeepMind's AI found new solution to decade-old "cap set puzzle," surpassing human-led solutions`,
       url: 'https://www.technologyreview.com/2023/12/14/1085318/google-deepmind-large-language-model-solve-unsolvable-math-problem-cap-set/',
     },
     {

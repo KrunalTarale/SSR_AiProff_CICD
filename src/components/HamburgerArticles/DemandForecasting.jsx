@@ -7,6 +7,11 @@ import './HamburgerArticle.css';
 function DemandForecasting() {
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/ai-demand-forecasting" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="min-w-full flex flex-col article">
         <div
