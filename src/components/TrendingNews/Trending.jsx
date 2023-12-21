@@ -5,7 +5,7 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        `Google Gemini is not even as good as GPT-3.5 Turbo, researchers find`,
+        `Google Gemini is not even as good as GPT-3.5 Turbo, researchers find `,
       url: 'https://arxiv.org/pdf/2312.11444.pdf',
     },
     {
