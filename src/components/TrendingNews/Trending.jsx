@@ -5,26 +5,26 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        `ByteDance secretly using OpenAI’s tech to build a competitor`,
-      url: 'https://www.theverge.com/2023/12/15/24003151/bytedance-china-openai-microsoft-competitor-llm',
+        `Google Gemini is not even as good as GPT-3.5 Turbo, researchers find`,
+      url: 'https://arxiv.org/pdf/2312.11444.pdf',
     },
     {
-      headline: `DeepMind's AI found new solution to decade-old "cap set puzzle," surpassing human-led solutions`,
-      url: 'https://www.technologyreview.com/2023/12/14/1085318/google-deepmind-large-language-model-solve-unsolvable-math-problem-cap-set/',
+      headline: `American drugstore, Rite Aid, banned from using facial recognition software after falsely identifying shoplifters`,
+      url: 'https://techcrunch.com/2023/12/20/rite-aid-facial-recognition/?guccounter=1',
     },
     {
-      headline: "Midjourney to launch a new platform for AI image generation",
-      url: 'https://venturebeat.com/ai/midjourney-alpha-is-here-with-ai-image-generations-on-the-web/',
-    },
-    {
-      headline:
-        'Intel unveils its new Core Ultra processors for enhancing AI capabilities',
-      url: 'https://www.theverge.com/2023/12/14/23998215/intel-core-ultra-cpu-specs-availability',
+      headline: "OpenAI demos a control method for Superintelligent AI",
+      url: 'https://cdn.openai.com/papers/weak-to-strong-generalization.pdf',
     },
     {
       headline:
-        'ChatGPT’s New Rival: Google’s Gemini',
-      url: 'https://www.kdnuggets.com/chatgpts-new-rival-googles-gemini',
+        'Microsoft Research has released "Phi-2," a 2.7 billion-parameter small language model',
+      url: 'https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/',
+    },
+    {
+      headline:
+        'Stability AI releases new model for text-to-3D from a single image',
+      url: 'https://stability.ai/news/stable-zero123-3d-generation',
     },
   ];
 
