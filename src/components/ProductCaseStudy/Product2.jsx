@@ -27,7 +27,7 @@ const Product2 = () => {
     <>
       <Navbar />
 
-      <img src={"https://aiproff.ai/dist/assets/product2/image17-5ad222c0.png"} alt="graph-economic-impact" />
+      <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} alt="graph-economic-impact" />
 
       <div className="constent-block">
         <h1 className="text-4xl font-bold mb-6 mt-6">
@@ -125,7 +125,7 @@ const Product2 = () => {
         <div className="vertical-paragraph mb-6">
           <div>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image6.jpg"}
+              src={"https://aiproff.ai/dist/assets/image6-876a14ea.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -159,7 +159,7 @@ const Product2 = () => {
 
           <div style={{ display: "flex", justifyContent: "end" }}>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image13.jpg"}
+              src={"https://aiproff.ai/dist/assets/image13-03950c69.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -184,7 +184,7 @@ const Product2 = () => {
         <div className="vertical-paragraph mb-6">
           <div>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image8.jpg"}
+              src={"https://aiproff.ai/dist/assets/image8-d69c8f2b.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -221,7 +221,7 @@ const Product2 = () => {
 
           <div style={{ display: "flex", justifyContent: "end" }}>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image14.jpg"}
+              src={"https://aiproff.ai/dist/assets/image14-b6535d5e.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -246,7 +246,7 @@ const Product2 = () => {
         <div className="vertical-paragraph mb-6">
           <div>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image9.jpg"}
+              src={"https://aiproff.ai/dist/assets/image9-d3e3514d.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -280,7 +280,7 @@ const Product2 = () => {
 
           <div style={{ display: "flex", justifyContent: "end" }}>
             <img
-              src={"https://aiproff.ai/dist/assets/product2/image1.jpg"}
+              src={"https://aiproff.ai/dist/assets/image1-c4824cdc.jpg"}
               style={{
                 objectFit: "scale-down",
                 width: "400px",
@@ -413,7 +413,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Seamless User Experience:</b>
 
-            <img src={"https://aiproff.ai/dist/assets/product1/image10.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image10-f5ea27f8.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Our envisioned solution is meticulously designed as an intuitive
@@ -427,7 +427,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Empowering Remote Accessibility:</b>
 
-            <img src={"https://aiproff.ai/dist/assets/product1/image5.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image5-2a17677e.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Our solution is engineered to transcend geographical barriers. It
@@ -441,7 +441,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Swift and Actionable Insights: </b>
 
-            <img src={"https://aiproff.ai/dist/assets/product1/image4.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image4-7f2635b0.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Utilizing advanced AI technologies, our solution offers real-time
@@ -459,7 +459,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Augmented Decision Support: </b>
 
-            <img src={"https://aiproff.ai/dist/assets/product1/image7.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image7-e17f4acb.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Beyond mere assessment, our solution embeds advanced AI-driven
@@ -473,7 +473,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Trust-Centric Approach: </b>
 
-            <img src={"https://aiproff.ai/dist/assets/product1/image16.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image16-3621a14f.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Central to our ethos is the cultivation of trust through our
@@ -510,7 +510,7 @@ const Product2 = () => {
           <b>Role 1: Tailored Therapeutic Recommendations</b>
         </p>
 
-        <img src={"https://aiproff.ai/dist/assets/product1/image11.jpg"} alt="This is image" />
+        <img src={"https://aiproff.ai/dist/assets/image11-948351da.jpg"} alt="This is image" />
 
         <ul className="list-disc">
           <li>
@@ -547,7 +547,7 @@ const Product2 = () => {
           <b>Role 2: Intelligent Assessment & Decision Support</b>
         </p>
 
-        <img src={"https://aiproff.ai/dist/assets/product1/image3.jpg"} alt="This is image" />
+        <img src={"https://aiproff.ai/dist/assets/image3-1a47f194.jpg"} alt="This is image" />
 
         <ul className="list-disc">
           <li>
@@ -609,7 +609,7 @@ const Product2 = () => {
             seamlessly transitions into the next, optimising for both efficiency
             and efficacy.
             <p>The following is the workflow of the proposed solution -</p>
-            <img src={"https://aiproff.ai/dist/assets/product1/image15.jpg"} alt="this is image" />
+            <img src={"https://aiproff.ai/dist/assets/image15-5489402a.jpg"} alt="this is image" />
           </li>
 
           <li>
@@ -632,7 +632,7 @@ const Product2 = () => {
           Conclusion: Embracing Tomorrow’s ASD Therapeutic Intervention Today
         </h1>
 
-        <img src={"https://aiproff.ai/dist/assets/product2/image18.jpg"} alt="This is image"/>
+        <img src={"https://aiproff.ai/dist/assets/image18-dcf01bf1.jpg"} alt="This is image"/>
 
         <p>
           In conclusion, AiProff.ai's foray into ASD Therapeutic Intervention
