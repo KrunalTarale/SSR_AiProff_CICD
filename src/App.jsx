@@ -127,7 +127,7 @@ function App() {
         <Route path="/reliable-and-robust-ai" element={<RealaibleAndRodbustAi />} />
         <Route path="/tags/:tagname" element={<Tags />} />
         <Route path="/wildlife-intrusion-detection-system-ai-aiproff" element={<Product1 />} />
-        <Route path="/product2" element={<Product2 />} />
+        <Route path="/therapy-planning-for-asd-kids-children-using-AI" element={<Product2 />} />
         <Route path="*" element={<NotFound />} />
         <Route
           path="/"
