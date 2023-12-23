@@ -126,9 +126,8 @@ function App() {
         <Route path="/cat" element={<CAT />} />
         <Route path="/reliable-and-robust-ai" element={<RealaibleAndRodbustAi />} />
         <Route path="/tags/:tagname" element={<Tags />} />
-        <Route path="/wildlife-intrusion-detection-system-ai-aiproff" element={<Product1 />} />
-        <Route path="/product2" element={<Product2 />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />}  />
+
         <Route
           path="/"
           element={
