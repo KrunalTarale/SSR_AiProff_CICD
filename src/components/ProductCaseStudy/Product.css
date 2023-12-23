@@ -1,0 +1,159 @@
+
+p{
+    font-family: "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid,
+    sans-serif;
+}
+
+h1{
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+}
+
+li{
+    font-family: "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid,
+    sans-serif;
+    font-size: 1.2rem;
+}
+
+.constent-block{
+    margin: auto;
+    margin-left: 23%;
+    margin-right: 23%;
+}
+
+
+.constent-block p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+.product-img-div{
+    height: 250px;
+}
+
+.product-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.product-card{
+    margin: 5px;
+    width: 250px;
+    height: 363px;
+}
+
+.upper-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.open-images{
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-paragraph{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.vertical-paragraph div{
+    width: 50%;
+}
+
+.vertical-paragraph div p{
+    margin-top: 10px;
+}
+
+.vertical-paragraph div img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.div-2{
+    display: none;
+}
+
+.lower-product-card{
+    margin: 5px;
+    width: 350px;
+    height: auto;
+}
+
+.lower-product-img-div{
+    height: 250px;
+}
+
+.lower-product-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.lower-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lowest-product-card{
+    margin: 15px;
+    width: 300px;
+    height: auto;
+}
+
+.newbtn{
+    display: flex;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .constent-block{
+        margin: auto;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .constent-block{
+        margin: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .vertical-paragraph{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .vertical-paragraph div{
+        width: 100%;
+    }
+
+    .vertical-paragraph div img{
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+        margin: auto;
+    }
+
+    .div-1{
+        display: none;
+    }
+
+    .div-2{
+        display: flex;
+    }
+  }
