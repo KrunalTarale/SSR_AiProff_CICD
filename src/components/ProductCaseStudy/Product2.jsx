@@ -27,7 +27,7 @@ const Product2 = () => {
     <>
       <Navbar />
 
-      <img src={"https://aiproff.ai/dist/assets/product2/image17.png"} alt="graph-economic-impact" />
+      <img src={"https://aiproff.ai/dist/assets/product2/image17-5ad222c0.png"} alt="graph-economic-impact" />
 
       <div className="constent-block">
         <h1 className="text-4xl font-bold mb-6 mt-6">
