@@ -27,7 +27,7 @@ const Product1 = () => {
     <>
       <Navbar />
 
-      <img src={"https://aiproff.ai/dist/assets/product1/image4.png"} alt="graph-economic-impact" />
+      <img src={"https://aiproff.ai/dist/assets/image4-230b51bc.png"} alt="graph-economic-impact" />
 
       <div className="constent-block">
         <h1 className="text-4xl font-bold mb-6 mt-6">
@@ -103,7 +103,7 @@ const Product1 = () => {
               <div className="product-card">
                 <div className="product-img-div">
                   <img
-                    src={"https://aiproff.ai/dist/assets/product1/image6.png"}
+                    src={"https://aiproff.ai/dist/assets/image6-8db3f318.png"}
                     className="product-img"
                     alt="This is image 2"
                   />
@@ -121,7 +121,7 @@ const Product1 = () => {
               <div className="product-card">
                 <div className="product-img-div">
                   <img
-                    src={"https://aiproff.ai/dist/assets/product1/image13.png"}
+                    src={"https://aiproff.ai/dist/assets/image13-6b8da3a9.png"}
                     className="product-img"
                     alt="This is image 3"
                   />
@@ -140,7 +140,7 @@ const Product1 = () => {
               <div className="product-card">
                 <div className="product-img-div">
                   <img
-                    src={"https://aiproff.ai/dist/assets/product1/image17.png"}
+                    src={"https://aiproff.ai/dist/assets/image17-f878e49f.png"}
                     className="product-img"
                     alt="This is image 4"
                   />
@@ -298,7 +298,7 @@ const Product1 = () => {
 
         <div className="vertical-paragraph mb-6">
           <div>
-            <img src={"https://aiproff.ai/dist/assets/product1/image12.png"} alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image12-e2197fce.png"} alt="This is image" />
           </div>
 
           <div>
@@ -327,7 +327,7 @@ const Product1 = () => {
           </div>
 
           <div style={{ display: "flex", justifyContent: "end" }}>
-            <img src={"https://aiproff.ai/dist/assets/product1/image5.png"} alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image5-0fb937c9.png"} alt="This is image" />
           </div>
 
           <div className="div-2">
@@ -344,7 +344,7 @@ const Product1 = () => {
 
         <div className="vertical-paragraph mb-6">
           <div>
-            <img src={"https://aiproff.ai/dist/assets/product1/image11.png"} alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image11-6099b450.png"} alt="This is image" />
           </div>
 
           <div>
@@ -411,7 +411,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image14.png"}
+                  src={"https://aiproff.ai/dist/assets/image14-7437a9ad.png"}
                   className="lower-product-img"
                   alt="This is image 2"
                 />
@@ -433,7 +433,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image10.png"}
+                  src={"https://aiproff.ai/dist/assets/image10-c4e7c048.png"}
                   className="lower-product-img"
                   alt="This is image 3"
                 />
@@ -456,7 +456,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image16.jpg"}
+                  src={"https://aiproff.ai/dist/assets/image16-62a01193.jpg"}
                   className="lower-product-img"
                   alt="This is image 4"
                 />
@@ -514,7 +514,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image2.jpg"}
+                  src={"https://aiproff.ai/dist/assets/image2-960128d2.jpg"}
                   className="lower-product-img"
                   alt="This is image 2"
                 />
@@ -534,7 +534,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image1.jpg"}
+                  src={"https://aiproff.ai/dist/assets/image1-c0f6d6fe.jpg"}
                   className="lower-product-img"
                   alt="This is image 3"
                 />
@@ -551,7 +551,7 @@ const Product1 = () => {
             <div className="lower-product-card">
               <div className="lower-product-img-div">
                 <img
-                  src={"https://aiproff.ai/dist/assets/product1/image3.jpg"}
+                  src={"https://aiproff.ai/dist/assets/image3-3af06677.jpg"}
                   className="lower-product-img"
                   alt="This is image 4"
                 />
@@ -581,7 +581,7 @@ const Product1 = () => {
               <div className="lowest-product-card">
                 <div className="product-img-div">
                   <img
-                    src={"https://aiproff.ai/dist/assets/product1/image7.png"}
+                    src={"https://aiproff.ai/dist/assets/image7-0f2f9da8.png"}
                     className="product-img"
                     alt="This is image 2"
                   />
@@ -598,7 +598,7 @@ const Product1 = () => {
               <div className="lowest-product-card">
                 <div className="product-img-div">
                   <img
-                    src={"https://aiproff.ai/dist/assets/product1/image8.jpg"}
+                    src={"https://aiproff.ai/dist/assets/image8-967017c9.jpg"}
                     className="product-img"
                     alt="This is image 4"
                   />
@@ -743,7 +743,7 @@ const Product1 = () => {
 
         <h1 className="text-2xl font-bold mb-6">Insights & Future Prospects</h1>
 
-        <img src={"https://aiproff.ai/dist/assets/product1/image9.jpg"} className="w-full mb-6" alt="this is image" />
+        <img src={"https://aiproff.ai/dist/assets/image9-aadff054.jpg"} className="w-full mb-6" alt="this is image" />
 
         <p>
           As we reflect on the journey thus far, several insights emerge that

@@ -2,8 +2,8 @@ import React from 'react'
 import  { useState } from 'react';
 import image1 from '../assets/trailer2.jpeg';
 import image2 from '../assets/trailer1.jpeg';
-import image3 from '../assets/Thumbnail for Animal detection in form land.png'
-import image4 from '../assets/updated banner asd.png'
+import image3 from '../assets/thumbnail1.png'
+import image4 from '../assets/thumbnail2.png'
 import './Trailer.css';
 import { Link } from 'react-router-dom';
 
@@ -285,7 +285,7 @@ const Trailer = () => {
       <div className="lg:flex trailer ">
         <div className="flex lg:w-1/2">
           <img
-            src={"https://aiproff.ai/dist/assets/Thumbnail for Animal detection in form land.png"}
+            src={"https://aiproff.ai/dist/assets/thumbnail1-e4355dee.png"}
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />
@@ -370,7 +370,7 @@ const Trailer = () => {
       <div className="lg:flex flex-row-reverse trailer ">
         <div className="flex lg:w-1/2">
           <img
-            src={"https://aiproff.ai/dist/assets/updated banner asd.png"}
+            src={"https://aiproff.ai/dist/assets/thumbnail2-04a98cbe.png"}
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />
