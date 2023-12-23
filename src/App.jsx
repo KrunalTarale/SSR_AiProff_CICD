@@ -124,7 +124,7 @@ function App() {
         <Route path="/cat" element={<CAT />} />
         <Route path="/reliable-and-robust-ai" element={<RealaibleAndRodbustAi />} />
         <Route path="/tags/:tagname" element={<Tags />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />}  />
         <Route
           path="/"
           element={
