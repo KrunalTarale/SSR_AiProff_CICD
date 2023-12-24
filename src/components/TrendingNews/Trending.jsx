@@ -8,10 +8,10 @@ const Trending = () => {
         `Google Gemini is not even as good as GPT-3.5 Turbo, researchers find `,
       url: 'https://arxiv.org/pdf/2312.11444.pdf',
     },
-    {
-      headline: `An american drugstore banned facial recognition software after falsely identifying shoplifters`,
-      url: 'https://techcrunch.com/2023/12/20/rite-aid-facial-recognition/?guccounter=1',
-    },
+    // {
+    //   headline: `An american drugstore banned facial recognition software after falsely identifying shoplifters`,
+    //   url: 'https://techcrunch.com/2023/12/20/rite-aid-facial-recognition/?guccounter=1',
+    // },
     {
       headline: "OpenAI demos a control method for Superintelligent AI",
       url: 'https://cdn.openai.com/papers/weak-to-strong-generalization.pdf',
