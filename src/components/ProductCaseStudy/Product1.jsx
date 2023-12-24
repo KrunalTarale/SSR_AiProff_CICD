@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
 import { Link } from "react-router-dom";
 import Footer from "../Foot/Foot.jsx";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShare,
+  faPrint,
+  faDownload,
+  faSave,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faLinkedin,
+  faTwitter,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
 
 import image1 from "../assets/product1/image4.png";
 import image2 from "../assets/product1/image6.png";
@@ -22,16 +40,193 @@ import image15 from "../assets/product1/image7.png";
 import image16 from "../assets/product1/image8.jpg";
 import image17 from "../assets/product1/image9.jpg";
 
+function shareOnLinkedIn() {
+  var url = "https://www.aiproff.ai/article";
+  var linkedinUrl =
+    "https://www.linkedin.com/sharing/share-offsite/?url=" +
+    encodeURIComponent(url);
+  window.open(linkedinUrl, "_blank");
+}
+
+function shareOnTwitter() {
+  // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
+  var url = "https://www.aiproff.ai/article";
+  window.open(
+    "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url),
+    "_blank"
+  );
+}
+
+//   function shareOnTwitter() {
+//     var url = 'https://www.aiproff.com/nlp';
+//     var text = 'Thank you for connecting with us';
+//     var twitterIntentURL = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+//     window.open(twitterIntentURL, '_blank');
+// }
+
+function shareOnFacebook() {
+  // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
+  var url = "https://www.aiproff.ai/article";
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url),
+    "_blank"
+  );
+}
+
+function shareByEmail() {
+  // Replace 'your-email-share-url' with the URL you want to share via email.
+  var url = "https://www.aiproff.ai/article";
+  window.location.href = "mailto:?body=" + encodeURIComponent(url);
+}
+
 const Product1 = () => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
+
+  const toggleAudioPlayerVisibility = () => {
+    setIsAudioPlayerVisible(!isAudioPlayerVisible);
+  };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // check if the target of the click event is not the dropdown or the share icon
+      if (
+        dropdownVisible &&
+        event.target.closest(".share-icon") === null &&
+        event.target.closest(".dropdown") === null
+      ) {
+        setDropdownVisible(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownVisible]);
+
   return (
     <>
       <Navbar />
 
-      <img src={"https://aiproff.ai/dist/assets/image4-230b51bc.png"} alt="graph-economic-impact" />
+      <img
+        src={"https://aiproff.ai/dist/assets/image4-230b51bc.png"}
+        alt="graph-economic-impact"
+      />
 
       <div className="constent-block">
+        {/* <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0 mt-10 mb-10">
+          <div className="underline underline-offset-4">
+            <Link to="/">By AiProff</Link>
+          </div>
+          <div>
+            {isAudioPlayerVisible ? (
+              <AudioPlayer
+                audio="/audio_files/Applied AI.mp3"
+                onClose={toggleAudioPlayerVisibility}
+                // Title={Title}
+              />
+            ) : (
+              <button
+                className="bg-blue-600 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-400"
+                onClick={toggleAudioPlayerVisibility}
+              >
+                <FontAwesomeIcon icon={faPlay} className="mr-2" />
+                Play
+              </button>
+            )}
+          </div>
+          <div className="flex space-x-4">
+            <div className="relative">
+              <div
+                className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon"
+                onClick={() => setDropdownVisible(!dropdownVisible)}
+              >
+                <FontAwesomeIcon
+                  icon={faShare}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Share</span>
+              </div>
+              {dropdownVisible && (
+                <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble dropdown">
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnLinkedIn}
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                    Linkedin
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnTwitter}
+                  >
+                    <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                    Twitter
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnFacebook}
+                  >
+                    <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                    Facebook
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareByEmail}
+                  >
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                    Email
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              // onClick={handlePrintClick}
+            >
+              <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faPrint}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Print</span>
+              </div>
+            </Link>
+
+            <Link
+              to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faDownload}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Download</span>
+              </div>
+            </Link>
+
+            <div
+              className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+              // onClick={handleSaveArticle}
+            >
+              <FontAwesomeIcon
+                icon={faSave}
+                className="hover:text-blue-500 cursor-pointer"
+              />
+              <span className="text-sm">Save</span>
+            </div>
+          </div>
+        </div> */}
+
         <h1 className="text-4xl font-bold mb-6 mt-6">
-        Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based Solution
+          Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based
+          Solution
         </h1>
 
         <h1 className="text-2xl font-bold mb-6">
@@ -70,12 +265,12 @@ const Product1 = () => {
           and emotional repercussions.
         </p>
 
-        <p>
+        {/* <p>
           In a pioneering effort, AiProff.ai has initiated a pilot AI-based
           solution in the village of Nagla Jagrupa (Mathura District, Uttar
           Pradesh), aiming to evaluate and refine a scalable, eco-friendly
           approach to agricultural security – harnessing the power of AI.
-        </p>
+        </p> */}
 
         <h1 className="text-2xl font-bold mb-6">
           The Agricultural Challenge: A Glimpse of Reality
@@ -298,7 +493,10 @@ const Product1 = () => {
 
         <div className="vertical-paragraph mb-6">
           <div>
-            <img src={"https://aiproff.ai/dist/assets/image12-e2197fce.png"} alt="This is image" />
+            <img
+              src={"https://aiproff.ai/dist/assets/image12-e2197fce.png"}
+              alt="This is image"
+            />
           </div>
 
           <div>
@@ -327,7 +525,10 @@ const Product1 = () => {
           </div>
 
           <div style={{ display: "flex", justifyContent: "end" }}>
-            <img src={"https://aiproff.ai/dist/assets/image5-0fb937c9.png"} alt="This is image" />
+            <img
+              src={"https://aiproff.ai/dist/assets/image5-0fb937c9.png"}
+              alt="This is image"
+            />
           </div>
 
           <div className="div-2">
@@ -344,7 +545,10 @@ const Product1 = () => {
 
         <div className="vertical-paragraph mb-6">
           <div>
-            <img src={"https://aiproff.ai/dist/assets/image11-6099b450.png"} alt="This is image" />
+            <img
+              src={"https://aiproff.ai/dist/assets/image11-6099b450.png"}
+              alt="This is image"
+            />
           </div>
 
           <div>
@@ -400,80 +604,76 @@ const Product1 = () => {
           encapsulate the essence of our solution:
         </p>
 
-        <div>
-
-      </div>
-
+        <div></div>
       </div>
 
       <div className="lower-cards mb-6 mt-6s">
-          <div>
-            <div className="lower-product-card">
-              <div className="lower-product-img-div">
-                <img
-                  src={"https://aiproff.ai/dist/assets/image14-7437a9ad.png"}
-                  className="lower-product-img"
-                  alt="This is image 2"
-                />
-              </div>
-              <ul className="lower-prod-list mb-6 mt-6">
-                <li>
-                  <b>Inbound and Outbound Detection of Wild Animals:</b> Central
-                  to our approach is the nuanced detection of wild animals,
-                  achieved through AI model training. By analysing animal
-                  movements, we aim to detect whether they are approaching the
-                  farmland or merely lingering on its periphery, thereby
-                  enabling timely interventions.
-                </li>
-              </ul>
+        <div>
+          <div className="lower-product-card">
+            <div className="lower-product-img-div">
+              <img
+                src={"https://aiproff.ai/dist/assets/image14-7437a9ad.png"}
+                className="lower-product-img"
+                alt="This is image 2"
+              />
             </div>
-          </div>
-
-          <div>
-            <div className="lower-product-card">
-              <div className="lower-product-img-div">
-                <img
-                  src={"https://aiproff.ai/dist/assets/image10-c4e7c048.png"}
-                  className="lower-product-img"
-                  alt="This is image 3"
-                />
-              </div>
-              <ul className="lower-prod-list mb-6 mt-6">
-                <li>
-                  <b>Animal Detector Alarm System: </b> Our system is engineered
-                  to activate alarms when an animal ventures within a critical
-                  threshold—specifically when it is approximately two feet from
-                  the farmland perimeter. Leveraging sophisticated audio-visual
-                  parameters, we aspire to create a restraint that maximises the
-                  likelihood of driving the animal away from the cultivated
-                  area.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div>
-            <div className="lower-product-card">
-              <div className="lower-product-img-div">
-                <img
-                  src={"https://aiproff.ai/dist/assets/image16-62a01193.jpg"}
-                  className="lower-product-img"
-                  alt="This is image 4"
-                />
-              </div>
-              <ul className="lower-prod-list mb-6 mt-6">
-                <li>
-                  <b>Monitoring & Feedback:</b> Beyond mere detection, our
-                  solution incorporates advanced AI/ML capabilities to monitor
-                  animal movements post-alarm activation. This iterative
-                  approach enables us to deploy additional alarms strategically,
-                  ensuring that the animal's exit from the farmland is both
-                  expedient and definitive.
-                </li>
-              </ul>
-            </div>
+            <ul className="lower-prod-list mb-6 mt-6">
+              <li>
+                <b>Inbound and Outbound Detection of Wild Animals:</b> Central
+                to our approach is the nuanced detection of wild animals,
+                achieved through AI model training. By analysing animal
+                movements, we aim to detect whether they are approaching the
+                farmland or merely lingering on its periphery, thereby enabling
+                timely interventions.
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div>
+          <div className="lower-product-card">
+            <div className="lower-product-img-div">
+              <img
+                src={"https://aiproff.ai/dist/assets/image10-c4e7c048.png"}
+                className="lower-product-img"
+                alt="This is image 3"
+              />
+            </div>
+            <ul className="lower-prod-list mb-6 mt-6">
+              <li>
+                <b>Animal Detector Alarm System: </b> Our system is engineered
+                to activate alarms when an animal ventures within a critical
+                threshold—specifically when it is approximately two feet from
+                the farmland perimeter. Leveraging sophisticated audio-visual
+                parameters, we aspire to create a restraint that maximises the
+                likelihood of driving the animal away from the cultivated area.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div className="lower-product-card">
+            <div className="lower-product-img-div">
+              <img
+                src={"https://aiproff.ai/dist/assets/image16-62a01193.jpg"}
+                className="lower-product-img"
+                alt="This is image 4"
+              />
+            </div>
+            <ul className="lower-prod-list mb-6 mt-6">
+              <li>
+                <b>Monitoring & Feedback:</b> Beyond mere detection, our
+                solution incorporates advanced AI/ML capabilities to monitor
+                animal movements post-alarm activation. This iterative approach
+                enables us to deploy additional alarms strategically, ensuring
+                that the animal's exit from the farmland is both expedient and
+                definitive.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div className="constent-block">
         <p>
@@ -541,7 +741,9 @@ const Product1 = () => {
               </div>
               <ul className="lower-prod-list mb-6 mt-6">
                 <li>
-                  <b>Intelligent Threat Detection:</b> Leveraging proprietary algorithms, the system identifies and captures relevant video clips featuring potential wildlife threats and intrusion. 
+                  <b>Intelligent Threat Detection:</b> Leveraging proprietary
+                  algorithms, the system identifies and captures relevant video
+                  clips featuring potential wildlife threats and intrusion.
                 </li>
               </ul>
             </div>
@@ -558,7 +760,12 @@ const Product1 = () => {
               </div>
               <ul className="lower-prod-list mb-6 mt-6">
                 <li>
-                  <b>Secure Mobile Application Interface:</b> A dedicated mobile application provides authorised users (farmers) with secure access to real-time video feeds and actionable insights. The clips attained undergo immediate processing to enable rapid response protocols while minimising data transmission overhead.
+                  <b>Secure Mobile Application Interface:</b> A dedicated mobile
+                  application provides authorised users (farmers) with secure
+                  access to real-time video feeds and actionable insights. The
+                  clips attained undergo immediate processing to enable rapid
+                  response protocols while minimising data transmission
+                  overhead.
                 </li>
               </ul>
             </div>
@@ -588,7 +795,11 @@ const Product1 = () => {
                 </div>
                 <ul className="prod-list mb-6 mt-6">
                   <li>
-                    <b>Localised AI Enhancement:</b> The AI algorithms are continuously refined using EDGE computing, enhancing their ability to discern genuine threats from false positives, thereby ensuring reliable performance in dynamic environments.
+                    <b>Localised AI Enhancement:</b> The AI algorithms are
+                    continuously refined using EDGE computing, enhancing their
+                    ability to discern genuine threats from false positives,
+                    thereby ensuring reliable performance in dynamic
+                    environments.
                   </li>
                 </ul>
               </div>
@@ -743,7 +954,11 @@ const Product1 = () => {
 
         <h1 className="text-2xl font-bold mb-6">Insights & Future Prospects</h1>
 
-        <img src={"https://aiproff.ai/dist/assets/image9-aadff054.jpg"} className="w-full mb-6" alt="this is image" />
+        <img
+          src={"https://aiproff.ai/dist/assets/image9-aadff054.jpg"}
+          className="w-full mb-6"
+          alt="this is image"
+        />
 
         <p>
           As we reflect on the journey thus far, several insights emerge that
@@ -836,7 +1051,15 @@ const Product1 = () => {
 
         <p className="mt-5">
           <i>
-          AiProff.ai excel at creating state-of-the-art AI/ML based solutions for Government, SMB, Large Enterprises  and Academic Institutions. <b> Owing to our cost efficient and optimal approach we are able to lower </b> the entry barrier  for organisations of all sizes for leveraging cutting edge AI/ML solutions and expedite Time to Market.
+            AiProff.ai excel at creating state-of-the-art AI/ML based solutions
+            for Government, SMB, Large Enterprises and Academic Institutions.{" "}
+            <b>
+              {" "}
+              Owing to our cost efficient and optimal approach we are able to
+              lower{" "}
+            </b>{" "}
+            the entry barrier for organisations of all sizes for leveraging
+            cutting edge AI/ML solutions and expedite Time to Market.
           </i>
         </p>
 
@@ -904,7 +1127,6 @@ const Product1 = () => {
       </div>
 
       <Footer />
-
     </>
   );
 };
