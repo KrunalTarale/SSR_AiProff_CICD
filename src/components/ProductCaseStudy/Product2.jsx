@@ -413,7 +413,7 @@ const Product2 = () => {
           <li>
             <b className="text-2xl">Seamless User Experience:</b>
 
-            <img src={"https://aiproff.ai/dist/assets/image10-f5ea27f8.jpg"} className="mt-5" alt="This is image" />
+            <img src={"https://aiproff.ai/dist/assets/image10-aa7e6b48.jpg"} className="mt-5" alt="This is image" />
 
             <p>
               Our envisioned solution is meticulously designed as an intuitive

@@ -9,7 +9,7 @@ const Trending = () => {
       url: 'https://arxiv.org/pdf/2312.11444.pdf',
     },
     {
-      headline: `American drugstore, Rite Aid, banned from using facial recognition software after falsely identifying shoplifters`,
+      headline: `An american drugstore banned facial recognition software after falsely identifying shoplifters`,
       url: 'https://techcrunch.com/2023/12/20/rite-aid-facial-recognition/?guccounter=1',
     },
     {

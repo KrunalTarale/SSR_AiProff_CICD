@@ -299,7 +299,7 @@ const Trailer = () => {
           <div className="mt-4">
             {' '}
             <p className="leading-loose text-md md:text-xl   text-black">
-            In the heart of India's agriculture landscape lies a pressing concern—wildlife intrusion, a challenge that annually inflicts significant crop damage. However, a glimmer of hope emerges in the form of an advanced alarm system that leverages the power of artificial intelligence on the issue of wildlife intrusion.
+            At the heart of India's agriculture landscape lies a pressing concern—wildlife intrusion, a challenge that annually inflicts significant crop damage. However, a glimmer of hope emerges in the form of an advanced alarm system that leverages the power of artificial intelligence on the issue of wildlife intrusion.
             </p>
           </div>
           <div className="mt-4">
