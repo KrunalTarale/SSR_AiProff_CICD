@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Footer from "../Foot/Foot.jsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,7 +41,7 @@ import image16 from "../assets/product1/image8.jpg";
 import image17 from "../assets/product1/image9.jpg";
 
 function shareOnLinkedIn() {
-  var url = "https://www.aiproff.ai/article";
+  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   var linkedinUrl =
     "https://www.linkedin.com/sharing/share-offsite/?url=" +
     encodeURIComponent(url);
@@ -50,7 +50,7 @@ function shareOnLinkedIn() {
 
 function shareOnTwitter() {
   // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-  var url = "https://www.aiproff.ai/article";
+  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.open(
     "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url),
     "_blank"
@@ -66,7 +66,7 @@ function shareOnTwitter() {
 
 function shareOnFacebook() {
   // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-  var url = "https://www.aiproff.ai/article";
+  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.open(
     "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url),
     "_blank"
@@ -75,13 +75,17 @@ function shareOnFacebook() {
 
 function shareByEmail() {
   // Replace 'your-email-share-url' with the URL you want to share via email.
-  var url = "https://www.aiproff.ai/article";
+  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.location.href = "mailto:?body=" + encodeURIComponent(url);
 }
 
 const Product1 = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
+
+  const Title = "Wildlife Intrusion Detection System: AI-Driven Initiative in Agricultural Security and Reforms";
+
+  const navigate = useNavigate();
 
   const toggleAudioPlayerVisibility = () => {
     setIsAudioPlayerVisible(!isAudioPlayerVisible);
@@ -105,6 +109,45 @@ const Product1 = () => {
     };
   }, [dropdownVisible]);
 
+
+  // Saving the article code
+
+  const [message, setmassage] = useState('');
+  const handleSaveArticle = async () => {
+    const auth = localStorage.getItem('user');
+    const user = JSON.parse(auth);
+
+    if (user) {
+      let res = await fetch('/update_article', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          id: user._id,
+          article: 'Wildlife',
+          title: "AiProff.ai's AI-Driven Initiative in Agricultural Security and Reforms",
+          date: 'September 4, 2023',
+          url: 'wildlife-intrusion-detection-system-ai-aiproff',
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+      setmassage(data.message);
+
+      setTimeout(() => {
+        setmassage('');
+      }, 2000);
+    } else {
+      navigate('/login')
+      setTimeout(() => {
+        setmassage('');
+      }, 2000);
+    }
+  };
+
+
   return (
     <>
       <Navbar />
@@ -114,17 +157,26 @@ const Product1 = () => {
         alt="graph-economic-impact"
       />
 
+{message && (
+            <div
+              className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt"
+              role="alert"
+            >
+              <p>{message}</p>
+            </div>
+          )}
+
       <div className="constent-block">
-        {/* <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0 mt-10 mb-10">
+        <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0 mt-10 mb-10">
           <div className="underline underline-offset-4">
             <Link to="/">By AiProff</Link>
           </div>
           <div>
             {isAudioPlayerVisible ? (
               <AudioPlayer
-                audio="/audio_files/Applied AI.mp3"
+                audio="/audio_files/Wildlife_aiproff.mp3"
                 onClose={toggleAudioPlayerVisibility}
-                // Title={Title}
+                Title={Title}
               />
             ) : (
               <button
@@ -182,7 +234,7 @@ const Product1 = () => {
               )}
             </div>
 
-            <Link
+            {/* <Link
               to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -209,11 +261,11 @@ const Product1 = () => {
                 />
                 <span className="text-sm">Download</span>
               </div>
-            </Link>
+            </Link> */}
 
             <div
               className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
-              // onClick={handleSaveArticle}
+              onClick={handleSaveArticle}
             >
               <FontAwesomeIcon
                 icon={faSave}
@@ -222,7 +274,7 @@ const Product1 = () => {
               <span className="text-sm">Save</span>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <h1 className="text-4xl font-bold mb-6 mt-6">
           Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based

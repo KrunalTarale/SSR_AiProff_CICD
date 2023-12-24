@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
 import Footer from "../Foot/Foot.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShare,
+  faPrint,
+  faDownload,
+  faSave,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faLinkedin,
+  faTwitter,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
 
 import image1 from "../assets/product2/image17.png";
 import image2 from "../assets/product2/image6.jpg";
@@ -21,15 +39,240 @@ import image14 from "../assets/product2/image3.jpg";
 import image15 from "../assets/product2/image15.png";
 import image17 from "../assets/product2/image18.jpg";
 
+function shareOnLinkedIn() {
+  var url = "https://www.aiproff.ai/therapy-planning-for-asd-kids-children-using-AI";
+  var linkedinUrl =
+    "https://www.linkedin.com/sharing/share-offsite/?url=" +
+    encodeURIComponent(url);
+  window.open(linkedinUrl, "_blank");
+}
+
+function shareOnTwitter() {
+  // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
+  var url = "https://www.aiproff.ai/therapy-planning-for-asd-kids-children-using-AI";
+  window.open(
+    "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url),
+    "_blank"
+  );
+}
+
+//   function shareOnTwitter() {
+//     var url = 'https://www.aiproff.com/nlp';
+//     var text = 'Thank you for connecting with us';
+//     var twitterIntentURL = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+//     window.open(twitterIntentURL, '_blank');
+// }
+
+function shareOnFacebook() {
+  // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
+  var url = "https://www.aiproff.ai/therapy-planning-for-asd-kids-children-using-AI";
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url),
+    "_blank"
+  );
+}
+
+function shareByEmail() {
+  // Replace 'your-email-share-url' with the URL you want to share via email.
+  var url = "https://www.aiproff.ai/therapy-planning-for-asd-kids-children-using-AI";
+  window.location.href = "mailto:?body=" + encodeURIComponent(url);
+}
+
+
+
 
 const Product2 = () => {
+
+  const Title = "Therapy Planning for ASD Kids: Children Using AI";
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
+
+  const navigate = useNavigate();
+
+  const toggleAudioPlayerVisibility = () => {
+    setIsAudioPlayerVisible(!isAudioPlayerVisible);
+  };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // check if the target of the click event is not the dropdown or the share icon
+      if (
+        dropdownVisible &&
+        event.target.closest(".share-icon") === null &&
+        event.target.closest(".dropdown") === null
+      ) {
+        setDropdownVisible(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownVisible]);
+
+  const [message, setmassage] = useState('');
+  const handleSaveArticle = async () => {
+    const auth = localStorage.getItem('user');
+    const user = JSON.parse(auth);
+
+    if (user) {
+      let res = await fetch('/update_article', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          id: user._id,
+          article: 'ASD',
+          title: "Therapy Planning for ASD Children using AI: A Data-Driven Journey into AI-Powered Care Planning",
+          date: 'September 4, 2023',
+          url: 'therapy-planning-for-asd-kids-children-using-AI',
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+      setmassage(data.message);
+
+      setTimeout(() => {
+        setmassage('');
+      }, 2000);
+    } else {
+      navigate('/login')
+      setTimeout(() => {
+        setmassage('');
+      }, 2000);
+    }
+  };
+
+
   return (
     <>
       <Navbar />
 
       <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} alt="graph-economic-impact" />
 
+      {message && (
+            <div
+              className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt"
+              role="alert"
+            >
+              <p>{message}</p>
+            </div>
+          )}
+
       <div className="constent-block">
+
+      <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0 mt-10 mb-10">
+          <div className="underline underline-offset-4">
+            <Link to="/">By AiProff</Link>
+          </div>
+          <div>
+            {isAudioPlayerVisible ? (
+              <AudioPlayer
+                audio="/audio_files/ASD_Planning_aiproff.mp3"
+                onClose={toggleAudioPlayerVisibility}
+                Title={Title}
+              />
+            ) : (
+              <button
+                className="bg-blue-600 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-400"
+                onClick={toggleAudioPlayerVisibility}
+              >
+                <FontAwesomeIcon icon={faPlay} className="mr-2" />
+                Play
+              </button>
+            )}
+          </div>
+          <div className="flex space-x-4">
+            <div className="relative">
+              <div
+                className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon"
+                onClick={() => setDropdownVisible(!dropdownVisible)}
+              >
+                <FontAwesomeIcon
+                  icon={faShare}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Share</span>
+              </div>
+              {dropdownVisible && (
+                <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble dropdown">
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnLinkedIn}
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                    Linkedin
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnTwitter}
+                  >
+                    <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                    Twitter
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareOnFacebook}
+                  >
+                    <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                    Facebook
+                  </div>
+                  <div
+                    className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                    onClick={shareByEmail}
+                  >
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                    Email
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* <Link
+              to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              // onClick={handlePrintClick}
+            >
+              <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faPrint}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Print</span>
+              </div>
+            </Link>
+
+            <Link
+              to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <FontAwesomeIcon
+                  icon={faDownload}
+                  className="hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Download</span>
+              </div>
+            </Link> */}
+
+            <div
+              className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+              onClick={handleSaveArticle}
+            >
+              <FontAwesomeIcon
+                icon={faSave}
+                className="hover:text-blue-500 cursor-pointer"
+              />
+              <span className="text-sm">Save</span>
+            </div>
+          </div>
+        </div>
+
         <h1 className="text-4xl font-bold mb-6 mt-6">
           Therapy Planning for ASD Children using AI: A Data-Driven Journey into
           AI-Powered Care Planning
