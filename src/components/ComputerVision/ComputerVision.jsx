@@ -136,7 +136,7 @@ const ComputerVision = () => {
           article: 'Computer Vision',
           title: 'Introduction to Computer Vision: When Machines Start to See',
           date: 'September 4, 2023',
-          url: 'Computer_Vision',
+          url: 'computer-vision',
         }),
       });
       const data = await res.json();
@@ -157,7 +157,7 @@ const ComputerVision = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.ai/Computer_Vision';
+    var url = 'https://www.aiproff.ai/computer-vision';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -166,7 +166,7 @@ const ComputerVision = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.ai/Computer_Vision';
+    var url = 'https://www.aiproff.ai/computer-vision';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -175,7 +175,7 @@ const ComputerVision = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.ai/Computer_Vision';
+    var url = 'https://www.aiproff.ai/computer-vision';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -184,7 +184,7 @@ const ComputerVision = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.ai/Computer_Vision';
+    var url = 'https://www.aiproff.ai/computer-vision';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 

@@ -136,7 +136,7 @@ const Nlp = () => {
           article: 'NLP',
           title: 'Introduction to NLP: When AI talks',
           date: 'September 4, 2023',
-          url: 'nlp',
+          url: 'introduction-to-nlp',
         }),
       });
       const data = await res.json();
@@ -157,7 +157,7 @@ const Nlp = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.ai/nlp';
+    var url = 'https://www.aiproff.ai/introduction-to-nlp';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -166,7 +166,7 @@ const Nlp = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.ai/nlp';
+    var url = 'https://www.aiproff.ai/introduction-to-nlp';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -182,7 +182,7 @@ const Nlp = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.ai/nlp';
+    var url = 'https://www.aiproff.ai/introduction-to-nlp';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -191,7 +191,7 @@ const Nlp = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.ai/nlp';
+    var url = 'https://www.aiproff.ai/introduction-to-nlp';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 

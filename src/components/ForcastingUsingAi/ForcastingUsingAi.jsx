@@ -135,7 +135,7 @@ const ForcastingUsingAi = () => {
           article: 'Forcasting using ai',
           title: 'Introduction: When AI starts to predict Future',
           date: 'September 4, 2023',
-          url: 'ForcastingUsingAi',
+          url: 'forecasting-using-ai',
         }),
       });
       const data = await res.json();
@@ -156,7 +156,7 @@ const ForcastingUsingAi = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/forecasting-using-ai';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -165,7 +165,7 @@ const ForcastingUsingAi = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/forecasting-using-ai';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -174,7 +174,7 @@ const ForcastingUsingAi = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/forecasting-using-ai';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -183,7 +183,7 @@ const ForcastingUsingAi = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/forecasting-using-ai';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 

@@ -138,7 +138,7 @@ const Article = () => {
           article: 'Article',
           title: 'Applied AI: When AI solves real world problems',
           date: 'September 4, 2023',
-          url: 'article',
+          url: 'applied-ai',
         }),
       });
       const data = await res.json();
@@ -158,7 +158,7 @@ const Article = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.ai/article';
+    var url = 'https://www.aiproff.ai/applied-ai';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -167,7 +167,7 @@ const Article = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.ai/article';
+    var url = 'https://www.aiproff.ai/applied-ai';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -183,7 +183,7 @@ const Article = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.ai/article';
+    var url = 'https://www.aiproff.ai/applied-ai';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -192,7 +192,7 @@ const Article = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.ai/article';
+    var url = 'https://www.aiproff.ai/applied-ai';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
