@@ -134,7 +134,7 @@ const RealaibleAndRodbustAi = () => {
           article: 'Reliable and Robust AI',
           title: 'Introduction: Reliable and Robust AI',
           date: 'September 4, 2023',
-          url: 'Realaible_And_RodbustAi',
+          url: 'reliable-and-robust-ai',
         }),
       });
       const data = await res.json();
@@ -155,7 +155,7 @@ const RealaibleAndRodbustAi = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.ai/Realaible_And_RodbustAi';
+    var url = 'https://www.aiproff.ai/reliable-and-robust-ai';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -164,7 +164,7 @@ const RealaibleAndRodbustAi = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.ai/Realaible_And_RodbustAi';
+    var url = 'https://www.aiproff.ai/reliable-and-robust-ai';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -173,7 +173,7 @@ const RealaibleAndRodbustAi = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.ai/Realaible_And_RodbustAi';
+    var url = 'https://www.aiproff.ai/reliable-and-robust-ai';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -182,7 +182,7 @@ const RealaibleAndRodbustAi = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.ai/Realaible_And_RodbustAi';
+    var url = 'https://www.aiproff.ai/reliable-and-robust-ai';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 

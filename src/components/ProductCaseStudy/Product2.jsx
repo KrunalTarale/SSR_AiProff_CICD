@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
 import Footer from "../Foot/Foot.jsx";
@@ -86,8 +86,37 @@ const Product2 = () => {
   const Title = "Therapy Planning for ASD Kids: Children Using AI";
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
+  const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
+  const [scrollProgress, setScrollProgress] = React.useState(0);
+  const [isDivVisible, setIsDivVisible] = React.useState(false);
+  const imageRef = useRef(null);
 
   const navigate = useNavigate();
+
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const progressPercentage = (scrollPosition / totalHeight) * 100;
+      setScrollProgress(progressPercentage);
+
+      if (imageRef.current && scrollPosition > imageRef.current.offsetHeight) {
+        setIsDivVisible(true);
+      } else {
+        setIsDivVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
 
   const toggleAudioPlayerVisibility = () => {
     setIsAudioPlayerVisible(!isAudioPlayerVisible);
@@ -151,7 +180,185 @@ const Product2 = () => {
     <>
       <Navbar />
 
-      <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} alt="graph-economic-impact" />
+      {isDivVisible ? (
+          <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-0 space-y-2">
+            <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
+              <div>
+                <h1 className="hidden md:flex text-xl">
+                Therapy Planning for ASD Children
+                </h1>
+              </div>
+
+              <div className="flex space-x-4 ">
+                <div className="relative">
+                  {' '}
+                  <div
+                    className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
+                    onClick={() =>
+                      setprogressDropdownVisible(!progressdropdownVisible)
+                    }
+                  >
+                    <FontAwesomeIcon
+                      icon={faShare}
+                      className="hover:text-blue-500 cursor-pointer"
+                    />
+                    <span className="text-sm">Share</span>
+                  </div>
+                  {progressdropdownVisible && (
+                    <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
+                        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                        Linkedin
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
+                        <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                        Twitter
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
+                        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                        Facebook
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        Email
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                  <FontAwesomeIcon
+                    icon={faPrint}
+                    className=" hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Print</span>
+                </div>
+                </Link>
+
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                    <FontAwesomeIcon
+                      icon={faDownload}
+                      className="hover:text-blue-500 cursor-pointer"
+                    />
+                    <span className="text-sm">Download</span>
+                  </div>
+                </Link> */}
+
+                <div
+                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+                  onClick={handleSaveArticle}
+                >
+                  <FontAwesomeIcon
+                    icon={faSave}
+                    className=" hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Save</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="scrollProgress"
+              className="h-1 bg-blue-500 transition-all duration-0 "
+              style={{ width: `${scrollProgress}%` }}
+            ></div>
+          </div>
+        ) : (
+          <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-[-100%]">
+            <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
+              <div>
+                <h1 className="hidden md:flex text-xl">
+                Therapy Planning for ASD Children
+                </h1>
+              </div>
+
+              <div className="flex space-x-4 ">
+                <div className="relative">
+                  {' '}
+                  <div
+                    className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
+                    onClick={() =>
+                      setprogressDropdownVisible(!progressdropdownVisible)
+                    }
+                  >
+                    <FontAwesomeIcon
+                      icon={faShare}
+                      className="hover:text-blue-500 cursor-pointer"
+                    />
+                    <span className="text-sm">Share</span>
+                  </div>
+                  {progressdropdownVisible && (
+                    <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
+                        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                        Linkedin
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
+                        <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                        Twitter
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
+                        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                        Facebook
+                      </div>
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                        Email
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {/* <div className="flex flex-col items-center text-center hover:text-blue-500">
+                  <FontAwesomeIcon
+                    icon={faPrint}
+                    className=" hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Print</span>
+                </div>
+
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                    <FontAwesomeIcon
+                      icon={faDownload}
+                      className="hover:text-blue-500 cursor-pointer"
+                    />
+                    <span className="text-sm">Download</span>
+                  </div>
+                </Link> */}
+
+                <div className="flex flex-col items-center text-center hover:text-blue-500">
+                  <FontAwesomeIcon
+                    icon={faSave}
+                    className=" hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Save</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="scrollProgress"
+              className="h-1 bg-blue-500 transition-all duration-0 "
+              style={{ width: `${scrollProgress}%` }}
+            ></div>
+          </div>
+        )}
+
+      <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} ref={imageRef} alt="graph-economic-impact" />
 
       {message && (
             <div
