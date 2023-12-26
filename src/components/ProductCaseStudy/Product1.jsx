@@ -1382,6 +1382,89 @@ const Product1 = () => {
         </ol>
       </div>
 
+      <div className="bg-slate-100 w-full article mb-5">
+        <div className="mx-auto flex  justify-center  ">
+          <h1 className="text-3xl md:text-4xl font-semibold mt-12">
+            Related Articles
+          </h1>
+        </div>
+        <div className="flex lg:flex-row flex-col p-8 card_container">
+        <Link
+                  to={'/reliable-and-robust-ai'}
+                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
+                >
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+            <img
+              src={"https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png"}
+              className="rounded-t card_img"
+              alt="Quantum Article"
+            />
+            <div className="p-4">
+
+                  <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                Introduction: Reliable and Robust AI
+              </p>
+              <p>The field of Artificial intelligence (AI) is rapidly evolving. It is tapping</p>
+             
+            </div>
+          </div>
+          </Link>
+
+          <Link
+                  to={'/introduction-to-nlp'}
+                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
+                >
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+            <img
+              src={"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"}
+              className="rounded-t card_img"
+              alt="Quantum Article"
+            />
+            <div className="p-4">
+
+                <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                Introduction to NLP: When AI talks
+              </p>
+              <p>
+              The field of Artificial intelligence is exciting. Under this discipline of Technology,
+              </p>
+              
+              <h1>
+              </h1>
+            </div>
+          </div>
+          </Link>
+
+          <Link
+                  to={'/computer-vision'}
+                  className="mx-1 text-blue-600 no-underline cursor-pointer"
+                >
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+            <img
+              src={"https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png"}
+              className="rounded-t card_img"
+              alt="Quantum Article"
+            />
+            <div className="p-4">
+
+              <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                Introduction to Computer Vision: When Machines Start to See
+              </p>
+              <p>
+              The quest for intelligence has been going on for ages, and the question of 
+              </p>
+             
+            </div>
+          </div>
+        </Link>
+        </div>
+      </div>
+
+
+
       <Footer />
     </>
   );
