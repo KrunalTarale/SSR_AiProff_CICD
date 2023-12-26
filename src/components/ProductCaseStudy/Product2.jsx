@@ -369,7 +369,7 @@ const Product2 = () => {
           </div>
         )}
 
-      <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} ref={imageRef} alt="graph-economic-impact" />
+      <img src={"https://aiproff.ai/dist/assets/image17-5ad222c0.png"} ref={imageRef} alt="graph-economic-impact" style={{ width: "100%" }} />
 
       {message && (
             <div

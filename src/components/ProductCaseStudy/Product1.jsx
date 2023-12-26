@@ -391,6 +391,7 @@ const Product1 = () => {
         ref={imageRef}
         src={"https://aiproff.ai/dist/assets/image4-230b51bc.png"}
         alt="graph-economic-impact"
+        style={{ width: "100%" }}
       />
 
       {message && (
