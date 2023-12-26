@@ -3,7 +3,7 @@ import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
 import Footer from "../Foot/Foot.jsx";
 import { Link, useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShare,
@@ -178,6 +178,17 @@ const Product2 = () => {
 
   return (
     <>
+
+<Helmet>
+        <meta charSet="utf-8" />
+        <title>ASD Therapeutic Intervention Care Using AI | AiProff.ai</title>
+        <meta
+          name="description"
+          content="Discover how AiProff is revolutionizing ASD care in India with AI-driven therapy planning. Dive into our innovative solution designed to empower therapists and parents alike. Experience personalized ASD care using AI technology. Take a step forward in enhancing ASD therapy using AI and embark on a transformative journey in ASD care planning using AI. Explore now for a brighter future in ASD care in India."
+        />
+        <link href="https://www.aiproff.ai/therapy-planning-for-asd-kids-children-using-AI" rel="canonical" />
+      </Helmet>
+
       <Navbar />
 
       {isDivVisible ? (
@@ -1208,12 +1219,12 @@ alt="This is image"
           </Link>
 
           <Link
-                  to={'/introduction-to-nlp'}
+                  to={'/wildlife-intrusion-detection-system-ai-aiproff'}
                   className="mx-1 text-blue-600 no-underline  cursor-pointer"
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
-              src={"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"}
+              src={"https://aiproff.ai/dist/assets/thumbnail1-e4355dee.png"}
               className="rounded-t card_img"
               alt="Quantum Article"
             />
@@ -1221,10 +1232,10 @@ alt="This is image"
 
                 <p>Sept 22, 2023</p>
               <p className="text-gray-700 font-bold hover:underline underline-offset-4">
-                Introduction to NLP: When AI talks
+              Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based Solution
               </p>
               <p>
-              The field of Artificial intelligence is exciting. Under this discipline of Technology,
+              At the heart of India's agriculture landscape lies a pressing concern—wildlife intrusion,
               </p>
               
               <h1>

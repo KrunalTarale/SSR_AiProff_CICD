@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Product.css";
 import Navbar from "../Navbar/Navbar.jsx";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Foot/Foot.jsx";
+import Helmet from "react-helmet";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -41,7 +42,8 @@ import image16 from "../assets/product1/image8.jpg";
 import image17 from "../assets/product1/image9.jpg";
 
 function shareOnLinkedIn() {
-  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
+  var url =
+    "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   var linkedinUrl =
     "https://www.linkedin.com/sharing/share-offsite/?url=" +
     encodeURIComponent(url);
@@ -50,7 +52,8 @@ function shareOnLinkedIn() {
 
 function shareOnTwitter() {
   // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
+  var url =
+    "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.open(
     "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url),
     "_blank"
@@ -59,7 +62,8 @@ function shareOnTwitter() {
 
 function shareOnFacebook() {
   // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
+  var url =
+    "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.open(
     "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url),
     "_blank"
@@ -68,7 +72,8 @@ function shareOnFacebook() {
 
 function shareByEmail() {
   // Replace 'your-email-share-url' with the URL you want to share via email.
-  var url = "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
+  var url =
+    "https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff";
   window.location.href = "mailto:?body=" + encodeURIComponent(url);
 }
 
@@ -79,7 +84,6 @@ const Product1 = () => {
   const [scrollProgress, setScrollProgress] = React.useState(0);
   const [isDivVisible, setIsDivVisible] = React.useState(false);
   const imageRef = useRef(null);
-
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -95,17 +99,15 @@ const Product1 = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-
-
-
-  const Title = "Wildlife Intrusion Detection System: AI-Driven Initiative in Agricultural Security and Reforms";
+  const Title =
+    "Wildlife Intrusion Detection System: AI-Driven Initiative in Agricultural Security and Reforms";
 
   const navigate = useNavigate();
 
@@ -131,27 +133,27 @@ const Product1 = () => {
     };
   }, [dropdownVisible]);
 
-
   // Saving the article code
 
-  const [message, setmassage] = useState('');
+  const [message, setmassage] = useState("");
   const handleSaveArticle = async () => {
-    const auth = localStorage.getItem('user');
+    const auth = localStorage.getItem("user");
     const user = JSON.parse(auth);
 
     if (user) {
-      let res = await fetch('/update_article', {
-        method: 'PUT',
+      let res = await fetch("/update_article", {
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           id: user._id,
-          article: 'Wildlife',
-          title: "AiProff.ai's AI-Driven Initiative in Agricultural Security and Reforms",
-          date: 'September 4, 2023',
-          url: 'wildlife-intrusion-detection-system-ai-aiproff',
+          article: "Wildlife",
+          title:
+            "AiProff.ai's AI-Driven Initiative in Agricultural Security and Reforms",
+          date: "September 4, 2023",
+          url: "wildlife-intrusion-detection-system-ai-aiproff",
         }),
       });
       const data = await res.json();
@@ -159,69 +161,89 @@ const Product1 = () => {
       setmassage(data.message);
 
       setTimeout(() => {
-        setmassage('');
+        setmassage("");
       }, 2000);
     } else {
-      navigate('/login')
+      navigate("/login");
       setTimeout(() => {
-        setmassage('');
+        setmassage("");
       }, 2000);
     }
   };
 
-
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based Solution | AiProff.ai</title>
+        <meta
+          name="description"
+          content="Discover how AiProff pioneers an innovative AI solution for wildlife intrusion prevention in Indian farms. Uncover the challenges faced by the agriculture-driven nation and explore the limitations of existing solutions. Join us on a journey to revolutionize crop protection with our pilot AI-driven initiative, combining cutting-edge technology with ecological sustainability."
+        />
+        <link href="https://www.aiproff.ai/wildlife-intrusion-detection-system-ai-aiproff" rel="canonical" />
+      </Helmet>
+
       <Navbar />
 
-
       {isDivVisible ? (
-          <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-0 space-y-2">
-            <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
-              <div>
-                <h1 className="hidden md:flex text-xl">
+        <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-0 space-y-2">
+          <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
+            <div>
+              <h1 className="hidden md:flex text-xl">
                 Wildlife Intrusion Detection & Prevention
-                </h1>
+              </h1>
+            </div>
+
+            <div className="flex space-x-4 ">
+              <div className="relative">
+                {" "}
+                <div
+                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
+                  onClick={() =>
+                    setprogressDropdownVisible(!progressdropdownVisible)
+                  }
+                >
+                  <FontAwesomeIcon
+                    icon={faShare}
+                    className="hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Share</span>
+                </div>
+                {progressdropdownVisible && (
+                  <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer "
+                      onClick={shareOnLinkedIn}
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                      Linkedin
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareOnTwitter}
+                    >
+                      <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                      Twitter
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareOnFacebook}
+                    >
+                      <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                      Facebook
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareByEmail}
+                    >
+                      <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                      Email
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <div className="flex space-x-4 ">
-                <div className="relative">
-                  {' '}
-                  <div
-                    className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
-                    onClick={() =>
-                      setprogressDropdownVisible(!progressdropdownVisible)
-                    }
-                  >
-                    <FontAwesomeIcon
-                      icon={faShare}
-                      className="hover:text-blue-500 cursor-pointer"
-                    />
-                    <span className="text-sm">Share</span>
-                  </div>
-                  {progressdropdownVisible && (
-                    <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
-                        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
-                        Linkedin
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
-                        <FontAwesomeIcon icon={faTwitter} className="mr-2" />
-                        Twitter
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
-                        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
-                        Facebook
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-                        Email
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* <Link
+              {/* <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -249,71 +271,83 @@ const Product1 = () => {
                   </div>
                 </Link> */}
 
-                <div
-                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
-                  onClick={handleSaveArticle}
-                >
-                  <FontAwesomeIcon
-                    icon={faSave}
-                    className=" hover:text-blue-500 cursor-pointer"
-                  />
-                  <span className="text-sm">Save</span>
-                </div>
+              <div
+                className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+                onClick={handleSaveArticle}
+              >
+                <FontAwesomeIcon
+                  icon={faSave}
+                  className=" hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Save</span>
               </div>
             </div>
-
-            <div
-              id="scrollProgress"
-              className="h-1 bg-blue-500 transition-all duration-0 "
-              style={{ width: `${scrollProgress}%` }}
-            ></div>
           </div>
-        ) : (
-          <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-[-100%]">
-            <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
-              <div>
-                <h1 className="hidden md:flex text-xl">
-                Wildlife Intrusion Detection & Prevention
-                </h1>
-              </div>
 
-              <div className="flex space-x-4 ">
-                <div className="relative">
-                  {' '}
-                  <div
-                    className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
-                    onClick={() =>
-                      setprogressDropdownVisible(!progressdropdownVisible)
-                    }
-                  >
-                    <FontAwesomeIcon
-                      icon={faShare}
-                      className="hover:text-blue-500 cursor-pointer"
-                    />
-                    <span className="text-sm">Share</span>
-                  </div>
-                  {progressdropdownVisible && (
-                    <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
-                        <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
-                        Linkedin
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
-                        <FontAwesomeIcon icon={faTwitter} className="mr-2" />
-                        Twitter
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
-                        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
-                        Facebook
-                      </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-                        Email
-                      </div>
-                    </div>
-                  )}
+          <div
+            id="scrollProgress"
+            className="h-1 bg-blue-500 transition-all duration-0 "
+            style={{ width: `${scrollProgress}%` }}
+          ></div>
+        </div>
+      ) : (
+        <div className="fixed article top-0 left-0 w-full h-15 bg-white z-50 border-b-4 transition-all duration-500 transform translate-y-[-100%]">
+          <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
+            <div>
+              <h1 className="hidden md:flex text-xl">
+                Wildlife Intrusion Detection & Prevention
+              </h1>
+            </div>
+
+            <div className="flex space-x-4 ">
+              <div className="relative">
+                {" "}
+                <div
+                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
+                  onClick={() =>
+                    setprogressDropdownVisible(!progressdropdownVisible)
+                  }
+                >
+                  <FontAwesomeIcon
+                    icon={faShare}
+                    className="hover:text-blue-500 cursor-pointer"
+                  />
+                  <span className="text-sm">Share</span>
                 </div>
-                {/* <div className="flex flex-col items-center text-center hover:text-blue-500">
+                {progressdropdownVisible && (
+                  <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer "
+                      onClick={shareOnLinkedIn}
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+                      Linkedin
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareOnTwitter}
+                    >
+                      <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+                      Twitter
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareOnFacebook}
+                    >
+                      <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                      Facebook
+                    </div>
+                    <div
+                      className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                      onClick={shareByEmail}
+                    >
+                      <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                      Email
+                    </div>
+                  </div>
+                )}
+              </div>
+              {/* <div className="flex flex-col items-center text-center hover:text-blue-500">
                   <FontAwesomeIcon
                     icon={faPrint}
                     className=" hover:text-blue-500 cursor-pointer"
@@ -335,25 +369,23 @@ const Product1 = () => {
                   </div>
                 </Link> */}
 
-                <div className="flex flex-col items-center text-center hover:text-blue-500">
-                  <FontAwesomeIcon
-                    icon={faSave}
-                    className=" hover:text-blue-500 cursor-pointer"
-                  />
-                  <span className="text-sm">Save</span>
-                </div>
+              <div className="flex flex-col items-center text-center hover:text-blue-500">
+                <FontAwesomeIcon
+                  icon={faSave}
+                  className=" hover:text-blue-500 cursor-pointer"
+                />
+                <span className="text-sm">Save</span>
               </div>
             </div>
-
-            <div
-              id="scrollProgress"
-              className="h-1 bg-blue-500 transition-all duration-0 "
-              style={{ width: `${scrollProgress}%` }}
-            ></div>
           </div>
-        )}
 
-
+          <div
+            id="scrollProgress"
+            className="h-1 bg-blue-500 transition-all duration-0 "
+            style={{ width: `${scrollProgress}%` }}
+          ></div>
+        </div>
+      )}
 
       <img
         ref={imageRef}
@@ -361,14 +393,14 @@ const Product1 = () => {
         alt="graph-economic-impact"
       />
 
-{message && (
-            <div
-              className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt"
-              role="alert"
-            >
-              <p>{message}</p>
-            </div>
-          )}
+      {message && (
+        <div
+          className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt"
+          role="alert"
+        >
+          <p>{message}</p>
+        </div>
+      )}
 
       <div className="constent-block">
         <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0 mt-10 mb-10">
@@ -1389,81 +1421,82 @@ const Product1 = () => {
           </h1>
         </div>
         <div className="flex lg:flex-row flex-col p-8 card_container">
-        <Link
-                  to={'/reliable-and-robust-ai'}
-                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
-                >
-          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
-              src={"https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png"}
-              className="rounded-t card_img"
-              alt="Quantum Article"
-            />
-            <div className="p-4">
-
-                  <p>Sept 22, 2023</p>
-              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
-                Introduction: Reliable and Robust AI
-              </p>
-              <p>The field of Artificial intelligence (AI) is rapidly evolving. It is tapping</p>
-             
-            </div>
-          </div>
-          </Link>
-
           <Link
-                  to={'/introduction-to-nlp'}
-                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
-                >
-          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
-              src={"https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"}
-              className="rounded-t card_img"
-              alt="Quantum Article"
-            />
-            <div className="p-4">
-
+            to={"/reliable-and-robust-ai"}
+            className="mx-1 text-blue-600 no-underline  cursor-pointer"
+          >
+            <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+              <img
+                src={
+                  "https://aiproff.ai/dist/assets/reliable-and-robust-ai-1-6538ad3ee3077-3e6eec26.png"
+                }
+                className="rounded-t card_img"
+                alt="Quantum Article"
+              />
+              <div className="p-4">
                 <p>Sept 22, 2023</p>
-              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
-                Introduction to NLP: When AI talks
-              </p>
-              <p>
-              The field of Artificial intelligence is exciting. Under this discipline of Technology,
-              </p>
-              
-              <h1>
-              </h1>
+                <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                  Introduction: Reliable and Robust AI
+                </p>
+                <p>
+                  The field of Artificial intelligence (AI) is rapidly evolving.
+                  It is tapping
+                </p>
+              </div>
             </div>
-          </div>
           </Link>
 
           <Link
-                  to={'/computer-vision'}
-                  className="mx-1 text-blue-600 no-underline cursor-pointer"
-                >
-          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
-              src={"https://aiproff.ai/dist/assets/computer-vision-3-6538ad3ea0802-1accc857.png"}
-              className="rounded-t card_img"
-              alt="Quantum Article"
-            />
-            <div className="p-4">
+            to={"/introduction-to-nlp"}
+            className="mx-1 text-blue-600 no-underline  cursor-pointer"
+          >
+            <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+              <img
+                src={
+                  "https://aiproff.ai/dist/assets/nlp-1-6538ad3dadc12-a97ea605.png"
+                }
+                className="rounded-t card_img"
+                alt="Quantum Article"
+              />
+              <div className="p-4">
+                <p>Sept 22, 2023</p>
+                <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                  Introduction to NLP: When AI talks
+                </p>
+                <p>
+                  The field of Artificial intelligence is exciting. Under this
+                  discipline of Technology,
+                </p>
 
-              <p>Sept 22, 2023</p>
-              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
-                Introduction to Computer Vision: When Machines Start to See
-              </p>
-              <p>
-              The quest for intelligence has been going on for ages, and the question of 
-              </p>
-             
+                <h1></h1>
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+
+          <Link
+            to={"/therapy-planning-for-asd-kids-children-using-AI"}
+            className="mx-1 text-blue-600 no-underline cursor-pointer"
+          >
+            <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
+              <img
+                src={"https://aiproff.ai/dist/assets/thumbnail2-04a98cbe.png"}
+                className="rounded-t card_img"
+                alt="Quantum Article"
+              />
+              <div className="p-4">
+                <p>Sept 22, 2023</p>
+                <p className="text-gray-700 font-bold hover:underline underline-offset-4">
+                  Therapy Planning for ASD Children using AI
+                </p>
+                <p>
+                  The landscape of Autism Spectrum Disorder (ASD) diagnosis and
+                  management
+                </p>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
-
-
 
       <Footer />
     </>
