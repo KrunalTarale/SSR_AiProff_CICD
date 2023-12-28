@@ -1,7 +1,12 @@
 // sitemap-generator.js
-import { SitemapStream, streamToPromise } from 'sitemap';
-import fs from 'fs';
-import path from 'path';
+// import { SitemapStream, streamToPromise } from 'sitemap';
+// import fs from 'fs';
+// import path from 'path';
+
+const { SitemapStream, streamToPromise } = require('sitemap');
+const fs = require('fs');
+const path = require('path');
+
 
 async function generateSitemap() {
   const hostname = 'https://www.aiproff.ai';
@@ -27,6 +32,8 @@ async function generateSitemap() {
     { url: '/assessment', changefreq: 'weekly' },
     { url: '/sign-in', changefreq: 'weekly' },
     { url: '/login  ', changefreq: 'weekly' },
+    { url: '/wildlife-intrusion-detection-system-ai-aiproff  ', changefreq: 'monthly' },
+    { url: '/therapy-planning-for-asd-kids-children-using-AI  ', changefreq: 'monthly' },
   ];
 
   const sitemapStream = new SitemapStream({ hostname });
