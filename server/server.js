@@ -89,6 +89,11 @@ app.use((req,res,next) => {
   }
 })
 
+app.get('/sitemap.xml', (req, res) => {
+  const filePath = path.resolve(__dirname, '../public/sitemap.xml');
+  res.sendFile(filePath);
+});
+
 // Server-side rendering middleware
 const serverRenderer = (req, res) => {
   const context = {};

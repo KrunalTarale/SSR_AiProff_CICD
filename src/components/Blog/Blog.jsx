@@ -22,6 +22,26 @@ const Blog = () => {
 
   const articles = [
     {
+      title: 'Wildlife Intrusion Detection & Prevention in Farmlands using AI-Based Solution',
+      subTitle:
+        'India is an agriculture-driven country. More than half of the Indian workforce is being employed directly, ',
+      imageUrl:"	https://aiproff.ai/dist/assets/thumbnail1-e4355dee.png",
+      readTime: '4 min',
+      date: 'Dec 24, 2023',
+      publisher: 'AiProff',
+      link: '/wildlife-intrusion-detection-system-ai-aiproff'
+    },
+    {
+      title: 'Therapy Planning for ASD Children using AI: A Data-Driven Journey into AI-Powered Care Planning',
+      subTitle:
+        'The landscape of Autism Spectrum Disorder (ASD) diagnosis and management in India is undergoing a profound transformation, ',
+      imageUrl:"https://aiproff.ai/dist/assets/thumbnail2-04a98cbe.png",
+      readTime: '4 min',
+      date: 'Dec 24, 2023',
+      publisher: 'AiProff',
+      link: '/therapy-planning-for-asd-kids-children-using-AI'
+    },
+    {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
         'The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, ',

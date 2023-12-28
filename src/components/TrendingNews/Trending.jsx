@@ -5,22 +5,22 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        `Google Gemini is not even as good as GPT-3.5 Turbo, researchers find `,
-      url: 'https://arxiv.org/pdf/2312.11444.pdf',
+        `New York Times sues OpenAI and Microsoft for 'billions'`,
+      url: 'https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html',
     },
     {
-      headline: "OpenAI demos a control method for Superintelligent AI",
-      url: 'https://cdn.openai.com/papers/weak-to-strong-generalization.pdf',
-    },
-    {
-      headline:
-        'Microsoft Research has released "Phi-2," a 2.7 billion-parameter small language model',
-      url: 'https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/',
+      headline: "OpenAI in talks to raise new funding at $100 bln valuation",
+      url: 'https://www.reuters.com/technology/openai-talks-raise-new-funding-100-bln-valuation-bloomberg-news-2023-12-22/',
     },
     {
       headline:
-        'Stability AI releases new model for text-to-3D from a single image',
-      url: 'https://stability.ai/news/stable-zero123-3d-generation',
+        'Scientists discover first new antibiotics in over 60 years using AI ',
+      url: 'https://news.mit.edu/2023/using-ai-mit-researchers-identify-antibiotic-candidates-1220',
+    },
+    {
+      headline:
+        'Apple quietly released an open-source multimodal LLM, Ferret, in October',
+      url: 'https://analyticsindiamag.com/apple-quitely-unveils-open-source-multimodal-llm-ferret/',
     },
   ];
 
