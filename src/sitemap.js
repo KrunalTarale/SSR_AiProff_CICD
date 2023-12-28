@@ -34,6 +34,17 @@ async function generateSitemap() {
     { url: '/login  ', changefreq: 'weekly' },
     { url: '/wildlife-intrusion-detection-system-ai-aiproff  ', changefreq: 'monthly' },
     { url: '/therapy-planning-for-asd-kids-children-using-AI  ', changefreq: 'monthly' },
+    { url: '/tags/deep-learning', changefreq: 'weekly' },
+    { url: '/tags/computer-vision', changefreq: 'weekly' },
+    { url: '/tags/natural-language-processing', changefreq: 'weekly' },
+    { url: '/tags/streaming-data-analytics', changefreq: 'weekly' },
+    { url: '/tags/embedded-ml', changefreq: 'weekly' },
+    { url: '/tags/tinyml-edge-ai', changefreq: 'weekly' },
+    { url: '/tags/iiot', changefreq: 'weekly' },
+    { url: '/tags/predictive-analytics', changefreq: 'weekly' },
+    { url: '/tags/data-analytics', changefreq: 'weekly' },
+    { url: '/tags/forecasting', changefreq: 'weekly' },
+    { url: '/tags/technology-frameworks', changefreq: 'weekly' },
   ];
 
   const sitemapStream = new SitemapStream({ hostname });
