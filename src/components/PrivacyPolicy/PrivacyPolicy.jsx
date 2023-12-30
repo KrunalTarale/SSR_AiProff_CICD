@@ -75,6 +75,18 @@ const About = () => {
           </div>
 
           <div>
+            <h2 className="lg:text-4xl text-3xl font-bold mb-3">3. Location Based-Actions and User Content:</h2>
+            {/* <p className='mb-2'>We use your personal data for various purposes, including but not limited to:</p> */}
+            <ul className="list">
+              <li>The app has workflow based on user location which can be granted or denied permission based on user choice.</li>
+              <li>Need access to contacts so that user can share insights with contact from within the app.</li>
+              <li>Local storage - user authorization and essential data to keep the app functioning.</li>
+            </ul>
+            {/* <p>We may also use cookies and similar tracking technologies to manage our website and services, as well as collect analytics about how you use them. Please refer to our Cookie Preference for more details on our use of cookies.</p> */}
+          </div>
+          
+
+          <div>
             <h2 className="lg:text-4xl text-3xl font-bold mb-3">3. Data Retention</h2>
             <p className='mb-2'>We retain personal data for as long as necessary for the purposes outlined in this Privacy Policy, including for legal and compliance purposes. If you request deletion of your personal data, we will make reasonable efforts to delete it, subject to any legal or regulatory obligations. For any such queries,  please contact us at support@aiproff.ai.</p>
           </div>
@@ -134,6 +146,8 @@ const About = () => {
             <p className='mb-3'>Your privacy and data security are important to us, and we are dedicated to ensuring that your personal data is handled with the utmost care and in accordance with applicable data protection laws and regulations.</p>
           </div>
 
+          <p>For the mobile apps published on App Store and PlayStore under AiProff.ai the privacy policy laid out on this page is applicable.</p>
+
           <div>
             <h3 className="lg:text-4xl text-3xl font-bold mb-3">7. Children</h3>
             <p className='mb-3'>Our website and services are not intended for children under 12 years of age, and we do not knowingly collect personal data from individuals under this age.</p>
@@ -153,7 +167,6 @@ const About = () => {
             <p className='mb-2'>Location:  Gurugram, Haryana, India</p>
             <p className='mb-2'>Phone Number:  +918076774495</p>
             <p className='mb-4'>Email Address:  support@aiproff.ai</p>
-            
             <p>Thank you for trusting AiProff.ai with your personal data and for reviewing our Privacy Policy.</p>
           </div>
 
