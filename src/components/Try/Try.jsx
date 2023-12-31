@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar.jsx";
 import ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
 
-const Buy = () => {
+const Try = () => {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -12,14 +12,14 @@ const Buy = () => {
   return (
     <div>
           <Helmet>
-            <link href="https://www.aiproff.ai/buy" rel="canonical" />
+            <link href="https://www.aiproff.ai/try" rel="canonical" />
           </Helmet>
       <Navbar />
 
-      <h1 className="text-4xl font-semibold text-center mt-10">Paid Services/Subscriptions will be available soon for purchase</h1>
+      <h1 className="text-4xl font-semibold text-center mt-10">Paid Services/Subscriptions will be available soon for the trial</h1>
 
     </div>
   );
 };
 
-export default Buy;
+export default Try;

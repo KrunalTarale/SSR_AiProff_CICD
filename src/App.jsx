@@ -65,6 +65,7 @@ import Buy from "./components/Buy/Buy.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import Product1 from "./components/ProductCaseStudy/Product1.jsx";
 import Product2 from "./components/ProductCaseStudy/Product2.jsx";
+import Try from "./components/Try/Try.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -87,7 +88,7 @@ function App() {
         <Route path="/poc" element={<POC />} />
         <Route path="/cat" element={<CAT />} />
         <Route path="/buy" element={<Buy />} />
-        <Route path="/try" element={<Buy />} />
+        <Route path="/try" element={<Try />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
         <Route path="/search" element={<SearchSite />} />
