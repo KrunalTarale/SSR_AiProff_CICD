@@ -50,7 +50,14 @@ const delete_user_Article = require('./controller/delete_user_Article.route');
 app.use(delete_user_Article);
 const webhook = require('./controller/webhook.route');
 app.use(webhook);
-
+const whatsapp_webhook = require('./controller/whatsapp_webhook.route');
+app.use(whatsapp_webhook);
+const getWhatsAppdata = require('./controller/getWhatsAppdata.route');
+app.use(getWhatsAppdata);
+const getwhatsappuserbyid = require('./controller/get_whatsappuserbyid.route');
+app.use(getwhatsappuserbyid);
+const sendwhatsAppMessages = require('./controller/sendwhatsAppMessages.route');
+app.use(sendwhatsAppMessages);
 
 
 

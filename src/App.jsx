@@ -66,7 +66,7 @@ import NotFound from "./components/NotFound/NotFound.jsx";
 import Product1 from "./components/ProductCaseStudy/Product1.jsx";
 import Product2 from "./components/ProductCaseStudy/Product2.jsx";
 import Try from "./components/Try/Try.jsx";
-
+import ChatComponent from "./components/ChatComponent/ChatComponent.jsx";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -130,6 +130,7 @@ function App() {
         <Route path="/wildlife-intrusion-detection-system-ai-aiproff" element={<Product1 />} />
         <Route path="/therapy-planning-for-asd-kids-children-using-AI" element={<Product2 />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/chatbot" element={<ChatComponent />} />
         <Route
           path="/"
           element={
