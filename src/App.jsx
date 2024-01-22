@@ -67,6 +67,8 @@ import Product1 from "./components/ProductCaseStudy/Product1.jsx";
 import Product2 from "./components/ProductCaseStudy/Product2.jsx";
 import Try from "./components/Try/Try.jsx";
 
+import OfferingNLP from "./components/Offering/NLP.jsx"
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -122,13 +124,16 @@ function App() {
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/articles" element={<YourArticle />} />
-        <Route path="/mvp" element={<MVP />} />
+        <Route path="/mvp" element={<MVP / >} />
         <Route path="/poc" element={<POC />} />
         <Route path="/cat" element={<CAT />} />
         <Route path="/reliable-and-robust-ai" element={<RealaibleAndRodbustAi />} />
         <Route path="/tags/:tagname" element={<Tags />} />
         <Route path="/wildlife-intrusion-detection-system-ai-aiproff" element={<Product1 />} />
         <Route path="/therapy-planning-for-asd-kids-children-using-AI" element={<Product2 />} />
+
+        <Route path="/offering-nlp" element={<OfferingNLP/>} />
+
         <Route path="*" element={<NotFound />} />
         <Route
           path="/"
