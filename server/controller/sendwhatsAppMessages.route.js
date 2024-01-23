@@ -1,44 +1,52 @@
 const route = require('express').Router();
 const WhatsappModel = require('../module/whatsapp.module');
 const axios = require("axios");
-const token =
-  "EAAZAa1WwYEL0BO8l9lOKwCspmpifZAgi7Qfn1tBwORWTL8jhWVBcl7c8FZC4hIoroZAnKLmXEjsDw5SN6ZCrn6pUOmeGOXUa6m42xMTd1ipnRAvZAVb3iIPZBO2rxZC0V25a7PCJtgZAZBWlc4MuX2GId2TQM2YIGurjMrVf0l8vKUi6NAAYZCMjZCFSdeOMy6bRyhLDKwx1DsgocW6ZA9ttwg61ZCcswbGwkZD";
+const token = "EAAZAa1WwYEL0BO9sM0FunJDXxondckmtp1ZBml5R7sDrcN1qFFurDZAMe6Ew8ZBwd5zmZAVrey7ZBfjMVPez0xjAnsIljRNLLK7ApXZBLOZAyWuZC9bIq9imKZB8COwaxQmNlFEnZCrEIz0EVQzhhZCAwBTrPPnkZAxsV8ZB7fsBnRl0TsWY9f2o1lX0jB1nkZAs5fQ8En5LZByVGIC5uvqlfwC0TIjQFUvg4eZB0";
 
 
 route.post("/send-whatsapp-message", async (req, res) => {
 
-    console.log(req.body);
+  let phone_no_id = req.body.phoneid;
+  let from = req.body.phonenumber;
 
-    const url =
-    "https://graph.facebook.com/v17.0/185315941321665/messages";
-  const accessToken = token;
+  const url =
+  "https://graph.facebook.com/v17.0/" + phone_no_id + "/messages";
+const accessToken = token;
 
-  const headers = {
-    Authorization: `Bearer ${accessToken}`,
-    "Content-Type": "application/json",
-  };
+const headers = {
+  Authorization: `Bearer ${accessToken}`,
+  "Content-Type": "application/json",
+};
 
-  const data = {
-    messaging_type: "whatsapp",
-    to: req.body.phonenumber,
-    messaging_product: "whatsapp",
-    text: {
-      body: req.body.message,
-    },
-  };
+const data = {
+  messaging_type: "whatsapp",
+  to: from,
+  messaging_product: "whatsapp",
+  text: {
+    body: req.body.message,
+  },
+};
 
-  res.sendStatus(200);
+res.sendStatus(200);
 
-  await axios.post(url, data, { headers });
+await axios.post(url, data, { headers });
+
+
 
   
-     // console.log(JSON.stringify(response.data));
+    //  console.log(JSON.stringify(response.data));
     const existingUser = await WhatsappModel.findOne({ phonenumber: req.body.phonenumber });
     existingUser.messages.push({ body: req.body.message, timestamp: new Date(),action : "send" });
     await existingUser.save();
-
-    // res.sendStatus(200);
   
   });
 
 module.exports = route
+
+
+
+//  Logic to save the massege of existing user to the db
+
+// const existingUser = await WhatsappModel.findOne({ phonenumber: req.body.phonenumber });
+// existingUser.messages.push({ body: req.body.message, timestamp: new Date(),action : "send" });
+// await existingUser.save();

@@ -58,6 +58,8 @@ const getwhatsappuserbyid = require('./controller/get_whatsappuserbyid.route');
 app.use(getwhatsappuserbyid);
 const sendwhatsAppMessages = require('./controller/sendwhatsAppMessages.route');
 app.use(sendwhatsAppMessages);
+const addnewwhatsappuser = require('./controller/add-whatsappuser.route');
+app.use(addnewwhatsappuser);
 
 
 

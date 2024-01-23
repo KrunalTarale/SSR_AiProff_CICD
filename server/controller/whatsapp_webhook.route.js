@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const token =
-  "EAAZAa1WwYEL0BO8l9lOKwCspmpifZAgi7Qfn1tBwORWTL8jhWVBcl7c8FZC4hIoroZAnKLmXEjsDw5SN6ZCrn6pUOmeGOXUa6m42xMTd1ipnRAvZAVb3iIPZBO2rxZC0V25a7PCJtgZAZBWlc4MuX2GId2TQM2YIGurjMrVf0l8vKUi6NAAYZCMjZCFSdeOMy6bRyhLDKwx1DsgocW6ZA9ttwg61ZCcswbGwkZD";
+  "EAAZAa1WwYEL0BOZBlvJAFfj3Y1zqZAeeWJF82QOWjvlPKLzFr0SL8PAEmOWCkjFHugvt1X6u5ZBZBomG8dYfF8iaJS3rRwWoZA9qCUFZA7GVrDCpvD4uCJFKlbJ0qb7Qx1FsqGjkLjHEZBvLW0vL9YVRCZAlJELI12jcmrrpmjUsfpcJNGjTkFIYWpOFbQs2Ta9AjXQZB0RaPjZAaAazZBatZAunt7QX9t2IZD";
 const mytoken = "krunalt";
 const WhatsappModel = require("../module/whatsapp.module");
 
@@ -39,7 +39,7 @@ router.get("/first_req-whatsapp", (req, res) => {
     url: "https://graph.facebook.com/v17.0/185315941321665/messages",
     headers: {
       Authorization:
-        "Bearer EAAZAa1WwYEL0BO8l9lOKwCspmpifZAgi7Qfn1tBwORWTL8jhWVBcl7c8FZC4hIoroZAnKLmXEjsDw5SN6ZCrn6pUOmeGOXUa6m42xMTd1ipnRAvZAVb3iIPZBO2rxZC0V25a7PCJtgZAZBWlc4MuX2GId2TQM2YIGurjMrVf0l8vKUi6NAAYZCMjZCFSdeOMy6bRyhLDKwx1DsgocW6ZA9ttwg61ZCcswbGwkZD",
+        "Bearer EAAZAa1WwYEL0BOZBlvJAFfj3Y1zqZAeeWJF82QOWjvlPKLzFr0SL8PAEmOWCkjFHugvt1X6u5ZBZBomG8dYfF8iaJS3rRwWoZA9qCUFZA7GVrDCpvD4uCJFKlbJ0qb7Qx1FsqGjkLjHEZBvLW0vL9YVRCZAlJELI12jcmrrpmjUsfpcJNGjTkFIYWpOFbQs2Ta9AjXQZB0RaPjZAaAazZBatZAunt7QX9t2IZD",
       "Content-Type": "application/json",
     },
     data: data,
@@ -135,6 +135,14 @@ router.post("/whatsapp-webhook", async (req, res) => {
           };
 
           res.sendStatus(200);
+
+          let existingUser = await WhatsappModel.findOne({ phonenumber: from });
+          existingUser.messages.push({
+          body: "Hi, how can I help you?",
+          timestamp: new Date(),  
+          action: "send",
+        });
+        await existingUser.save();
 
           await axios.post(url, data, { headers });
         } 
