@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 // const mongoDB = 'mongodb+srv://chunkyfullthrottle:Pi%4031415@aiproffcontact.av1oibw.mongodb.net/contactusDB?retryWrites=true&w=majority';
-// const mongoDB = 'mongodb+srv://doadmin:V0W63748g19kBcHI@dbaas-db-2840143-36631677.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=dbaas-db-2840143'
-const mongoDB = 'mongodb+srv://doadmin:V0W63748g19kBcHI@dbaas-db-2840143-36631677.mongo.ondigitalocean.com/admin?replicaSet=dbaas-db-2840143&tls=true&authSource=admin';
+const mongoDB = 'mongodb+srv://doadmin:531a9lLHu67S4k0F@dbaas-db-2840143-36631677.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=dbaas-db-2840143';
 
 
 async function connectToDatabase() {
